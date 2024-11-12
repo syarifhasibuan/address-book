@@ -30,7 +30,25 @@
         </a>
       </header>
       <section id="sidebar" class="grid-sidebar w-full"></section>
-      <section id="search-bar" class="grid-search w-full"></section>
+      <section
+        id="search-bar"
+        class="flex box-border grid-search w-full py-2 px-4"
+      >
+        <div
+          class="flex flex-row gap-2 rounded-lg bg-white border-2 box-border w-full max-w-md p-2"
+        >
+          <input
+            type="search"
+            id="contact-search"
+            name="contact-search"
+            placeholder="Search"
+            class="bg-transparent w-full focus:outline-none"
+          />
+          <button type="button" class="flex items-center justify-center">
+            <img src="/assets/magnifier.svg" alt="Search" class="h-6 w-6" />
+          </button>
+        </div>
+      </section>
       <section id="contacts" class="flex grid-contacts w-full p-4">
         <div class="flex-1 w-full h-full rounded-xl p-4 bg-white"></div>
       </section>
