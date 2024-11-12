@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.5 47.5" id="card">
+  <defs>
+    <clipPath id="a">
+      <path d="M0 38h38V0H0v38Z"></path>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#a)" transform="matrix(1.25 0 0 -1.25 0 47.5)">
+    <path fill="#292f33" d="M33 24H5a4 4 0 0 1-4-4v-2a4 4 0 0 1 4-4V5a4 4 0 0 1 4-4h20a4 4 0 0 1 4 4v9a4 4 0 0 1 4 4v2a4 4 0 0 1-4 4"></path>
+    <path fill="#ccd6dd" d="M31 22a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V22Z"></path>
+    <path fill="#55acee" d="M19 24a1 1 0 0 0-1-1h-8a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V24Z"></path>
+    <path fill="#ccd6dd" d="M31 5a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V5Z"></path>
+    <path fill="#66757f" d="M29 33a1 1 0 0 0-1-1h-6a1 1 0 1 0 0 2h6a1 1 0 0 0 1-1M29 29a1 1 0 0 0-1-1h-6a1 1 0 1 0 0 2h6a1 1 0 0 0 1-1M29 25a1 1 0 0 0-1-1h-6a1 1 0 1 0 0 2h6a1 1 0 0 0 1-1"></path>
+    <path fill="#99aab5" d="M15 17a1 1 0 1 0-2 0v4a1 1 0 1 0 2 0v-4ZM25 17a1 1 0 1 0-2 0v4a1 1 0 1 0 2 0v-4Z"></path>
+  </g>
+</svg>

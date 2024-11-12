@@ -1,0 +1,29 @@
+body {
+  font-family: sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 64px 1fr;
+  grid-template-columns: 300px 5fr 1fr;
+}
+
+.grid-menu {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.grid-sidebar {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.grid-search {
+  grid-area: 1 / 2 / 1 / 3;
+}
+
+.grid-contacts {
+  grid-area: 2 / 2 / 3 / 4;
+}
+
+.grid-toolbar {
+  grid-area: 1 / 3 / 2 / 4;
+}
