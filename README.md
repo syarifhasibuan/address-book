@@ -9,7 +9,7 @@ The projects take inspiration from these websites:
 
 -   [Google Contacts](https://contacts.google.com)
 -   [Budi Gunawan's Charm](https://charm.budigunawan.com/)
--   [Aziz Gunawan's Address Book](https://bearmentor-address-book.azizramdan.id/)
+-   [Aziz Ramdan's Address Book](https://bearmentor-address-book.azizramdan.id/)
 
 ## Preview
 
