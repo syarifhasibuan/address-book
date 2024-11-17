@@ -17,10 +17,11 @@ The projects take inspiration from these websites:
 
 ## Todo
 
--   Add sidebar content
--   Fix table row scrolling overlap with sticky header
--   Add search functionality
--   Add profile icon on the right top
--   Add favorite star button
--   Add "Add contact" button
--   Add edit button
+-   [ ] Add sidebar content
+-   [ ] Fix table row scrolling overlap with sticky header
+-   [x] Add search functionality
+-   [ ] Add profile icon on the right top
+-   [ ] Add favorite star button
+-   [ ] Add "Add contact" button
+-   [ ] Add edit button
+-   [ ] Search the whole contact field instead of just name
