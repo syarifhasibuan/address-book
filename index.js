@@ -35,6 +35,7 @@ function addListenerMulti(element, eventNames, listener) {
 
 function toggleHighlight(ev) {
   let tr = event.target.closest("tr");
+  let tdTarget = event.target.closest("td");
   if (!tr) {
     return;
   }
@@ -44,7 +45,7 @@ function toggleHighlight(ev) {
   for (let i = 0; i < tds.length; i++) {
     if (ev.type == "mouseout") {
       tds[i].classList.remove("bg-violet-100");
-    } else if (ev.type == "mouseover") {
+    } else if (ev.type == "mouseover" && tdTarget.id != "otherColumn") {
       tds[i].classList.add("bg-violet-100");
     }
   }

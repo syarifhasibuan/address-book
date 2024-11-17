@@ -17,6 +17,7 @@ The projects take inspiration from these websites:
 -   Search contact by all parameter
 -   Shortcut key to focus on search bar
 -   Show favorite in an icon
+-   Highlight the contact that you are hovering
 
 ## Preview
 
@@ -27,7 +28,7 @@ The projects take inspiration from these websites:
 -   [ ] Add sidebar content
 -   [ ] Fix table row scrolling overlap with sticky header
 -   [x] Add search functionality
--   [ ] Add profile icon on the right top
+-   [x] Add profile icon on the right top
 -   [x] Add favorite star button
 -   [ ] Add "Add contact" button
 -   [ ] Add edit button
