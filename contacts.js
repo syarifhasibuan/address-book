@@ -1,4 +1,4 @@
-export const contacts = [
+const contacts = [
   {
     name: "John Doe",
     nickname: "Johnny",

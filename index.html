@@ -50,10 +50,39 @@
         </div>
       </section>
       <section id="contacts" class="flex grid-contacts w-full p-4">
-        <div class="flex-1 w-full h-full rounded-xl p-4 bg-white"></div>
+        <div class="flex-1 w-full h-full rounded-xl p-4 bg-white">
+          <table class="w-full">
+            <thead>
+              <tr class="text-left">
+                <th class="py-4 px-2">Name</th>
+                <th class="py-4 px-2">Nickname</th>
+                <th class="py-4 px-2">Email</th>
+                <th class="py-4 px-2">Phone Number</th>
+                <th class="py-4 px-2">Work Info</th>
+                <th class="py-4 px-2">Address</th>
+                <th class="py-4 px-2">Group</th>
+                <th class="py-4 px-2">Favorite</th>
+              </tr>
+            </thead>
+            <tbody id="contactsTableBody"></tbody>
+          </table>
+          <template id="contactRow">
+            <tr>
+              <td class="py-4 px-2" id="contactRowName">name</td>
+              <td class="py-4 px-2" id="contactRowNickname">nickname</td>
+              <td class="py-4 px-2" id="contactRowEmail">email</td>
+              <td class="py-4 px-2" id="contactRowPhone">phone</td>
+              <td class="py-4 px-2" id="contactRowWork">work_info</td>
+              <td class="py-4 px-2" id="contactRowAddress">address</td>
+              <td class="py-4 px-2" id="contactRowGroup">group</td>
+              <td class="py-4 px-2" id="contactRowFavorite">isFavorite</td>
+            </tr>
+          </template>
+        </div>
       </section>
       <section id="toolbar" class="grid-toolbar w-full"></section>
     </div>
+    <script src="/contacts.js"></script>
     <script src="/index.js"></script>
   </body>
 </html>
