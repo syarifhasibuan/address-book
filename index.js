@@ -1,10 +1,5 @@
 ("use strict");
 
-// let contact for
-// for (const c in contacts) {
-//   addContact(contacts[c]);
-// }
-
 if ("content" in document.createElement("template")) {
   const tableBody = document.getElementById("contactsTableBody");
   const templateRow = document.getElementById("contactRow");
@@ -29,7 +24,6 @@ function objectToString(inspectElement) {
     return inspectElement;
   }
 
-  console.log(inspectElement);
   for (let key in inspectElement) {
     if (retString) {
       retString = retString.concat(", ", objectToString(inspectElement[key]));
@@ -37,44 +31,6 @@ function objectToString(inspectElement) {
       retString = inspectElement[key];
     }
   }
-  console.log(retString);
 
   return retString;
-}
-
-function getRecord(contactElem) {
-  if (typeof contactElem == "string") {
-    return contactElem;
-  } else if (typeof contactElem == "object") {
-    let retString = "";
-    for (let key in contactElem) {
-      if (retString) {
-        retString = retString.concat(", ", getRecord(contactElem[key]));
-      } else {
-        retString = contactElem[key];
-      }
-    }
-    return retString;
-  }
-}
-
-function addCol(contact) {
-  const newCol = document.createElement("td");
-  newCol.appendChild(document.createTextNode(getRecord(contact)));
-
-  return newCol;
-}
-
-function addRow(contact) {
-  const newRow = document.createElement("tr");
-  for (let key in contact) {
-    newRow.appendChild(addCol(contact[key]));
-  }
-
-  return newRow;
-}
-
-function addContact(contact) {
-  const table = document.getElementById("contactsTableBody");
-  table.appendChild(addRow(contact));
 }
