@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/index.css" />
   </head>
   <body>
-    <div class="grid-container min-h-screen bg-violet-100">
+    <div class="grid-container w-screen h-screen bg-violet-100">
       <header
         id="header"
         class="grid-menu flex flex-row justify-center w-full p-2"
@@ -49,19 +49,24 @@
           </button>
         </div>
       </section>
-      <section id="contacts" class="flex grid-contacts w-full p-4">
-        <div class="flex-1 w-full h-full rounded-xl p-4 bg-white">
+      <section
+        id="contacts"
+        class="auto-rows-max flex grid-contacts w-full p-4 overflow-hidden"
+      >
+        <div
+          class="flex-1 w-full h-full rounded-xl p-4 bg-white overflow-scroll"
+        >
           <table class="w-full">
-            <thead>
+            <thead class="bg-white sticky top-0">
               <tr class="text-left">
-                <th class="py-4 px-2">Name</th>
-                <th class="py-4 px-2">Nickname</th>
-                <th class="py-4 px-2">Email</th>
-                <th class="py-4 px-2">Phone Number</th>
-                <th class="py-4 px-2">Work Info</th>
-                <th class="py-4 px-2">Address</th>
-                <th class="py-4 px-2">Group</th>
-                <th class="py-4 px-2">Favorite</th>
+                <th class="py-4 px-2 sticky top-0">Name</th>
+                <th class="py-4 px-2 sticky top-0">Nickname</th>
+                <th class="py-4 px-2 sticky top-0">Email</th>
+                <th class="py-4 px-2 sticky top-0">Phone Number</th>
+                <th class="py-4 px-2 sticky top-0">Work Info</th>
+                <th class="py-4 px-2 sticky top-0">Address</th>
+                <th class="py-4 px-2 sticky top-0">Group</th>
+                <th class="py-4 px-2 sticky top-0">Favorite</th>
               </tr>
             </thead>
             <tbody id="contactsTableBody"></tbody>
