@@ -25,7 +25,7 @@
             id="menu-bar"
           >
             <img src="/favicon.svg" width="32" height="32" />
-            <h1 class="font-bold text-2xl text-black">Rolodex</h1>
+            <h1 class="font-bold text-2xl text-gray-700">Rolodex</h1>
           </div>
         </a>
       </header>
@@ -63,27 +63,29 @@
           <table id="contactsTable" class="w-full">
             <thead class="bg-white sticky top-0">
               <tr class="text-left">
-                <th class="py-4 px-2 sticky top-0">Name</th>
-                <th class="py-4 px-2 sticky top-0">Nickname</th>
-                <th class="py-4 px-2 sticky top-0">Email</th>
-                <th class="py-4 px-2 sticky top-0">Phone Number</th>
-                <th class="py-4 px-2 sticky top-0">Work Info</th>
-                <th class="py-4 px-2 sticky top-0">Address</th>
-                <th class="py-4 px-2 sticky top-0">Group</th>
-                <th class="py-4 px-2 sticky top-0"></th>
+                <th class="py-4 px-2 sticky top-0 text-gray-700">Name</th>
+                <th class="py-4 px-2 sticky top-0 text-gray-700">Nickname</th>
+                <th class="py-4 px-2 sticky top-0 text-gray-700">Email</th>
+                <th class="py-4 px-2 sticky top-0 text-gray-700">
+                  Phone Number
+                </th>
+                <th class="py-4 px-2 sticky top-0 text-gray-700">Work Info</th>
+                <th class="py-4 px-2 sticky top-0 text-gray-700">Address</th>
+                <th class="py-4 px-2 sticky top-0 text-gray-700">Group</th>
+                <th class="py-4 px-2 sticky top-0 text-gray-700"></th>
               </tr>
             </thead>
             <tbody id="contactsTableBody"></tbody>
           </table>
           <template id="contactRowTemplate">
             <tr id="contactRow">
-              <td class="rounded-l-md y-4 px-2">name</td>
-              <td class="y-4 px-2">nickname</td>
-              <td class="y-4 px-2">email</td>
-              <td class="y-4 px-2">phone</td>
-              <td class="y-4 px-2">work_info</td>
-              <td class="y-4 px-2">address</td>
-              <td class="y-4 px-2">group</td>
+              <td class="rounded-l-md y-4 px-2 text-gray-700">name</td>
+              <td class="y-4 px-2 text-gray-700">nickname</td>
+              <td class="y-4 px-2 text-gray-700">email</td>
+              <td class="y-4 px-2 text-gray-700">phone</td>
+              <td class="y-4 px-2 text-gray-700">work_info</td>
+              <td class="y-4 px-2 text-gray-700">address</td>
+              <td class="y-4 px-2 text-gray-700">group</td>
               <td class="rounded-r-md" id="otherColumn">
                 <button
                   class="flex justify-center h-9 w-9 rounded-full hover:bg-violet-100"

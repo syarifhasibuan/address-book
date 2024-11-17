@@ -93,6 +93,7 @@ function stringInContact(str, contact) {
 
 function objectToString(inspectElement) {
   let retString = "";
+
   // Question: string comparison, == or === ?
   if (typeof inspectElement == "string") {
     return inspectElement;
@@ -100,10 +101,18 @@ function objectToString(inspectElement) {
     return "";
   }
 
+  // console.log(inspectElement);
   // Question: iterate over object children? (2)
   for (let key in inspectElement) {
+    if (key == "to_string_delimiter") {
+      continue;
+    }
+
     if (retString) {
-      retString = retString.concat(", ", objectToString(inspectElement[key]));
+      retString = retString.concat(
+        inspectElement.to_string_delimiter,
+        objectToString(inspectElement[key])
+      );
     } else {
       retString = inspectElement[key];
     }
