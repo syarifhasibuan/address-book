@@ -7,6 +7,54 @@ const searchField = document.getElementById("contactSearch");
 
 document.addEventListener("keyup", shortcutKeys);
 
+// document
+//   .querySelector("#contactsTableBody")
+//   .addEventListener("mouseover", (e) => {
+//     console.log(e);
+//     let tr = event.target.closest("tr");
+//     if (!tr) {
+//       return;
+//     }
+
+//     console.log(tr);
+//     // Question: iterate over object children? (1)
+//     let tds = tr.children;
+//     console.log(tds.length);
+//     for (let i = 0; i < tds.length; i++) {
+//       tds[i].classList.add("bg-violet-100");
+//     }
+//   });
+
+addListenerMulti(
+  document.querySelector("#contactsTableBody"),
+  "mouseover mouseout",
+  toggleHighlight
+);
+
+function addListenerMulti(element, eventNames, listener) {
+  let events = eventNames.split(" ");
+  for (let i = 0, iLen = events.length; i < iLen; i++) {
+    element.addEventListener(events[i], listener, false);
+  }
+}
+
+function toggleHighlight(ev) {
+  let tr = event.target.closest("tr");
+  if (!tr) {
+    return;
+  }
+
+  // Question: iterate over object children? (1)
+  let tds = tr.children;
+  for (let i = 0; i < tds.length; i++) {
+    if (ev.type == "mouseout") {
+      tds[i].classList.remove("bg-violet-100");
+    } else if (ev.type == "mouseover") {
+      tds[i].classList.add("bg-violet-100");
+    }
+  }
+}
+
 // Question: Does it affect performance?
 searchField.addEventListener("keyup", ({ key }) => {
   searchString = searchField.value;
@@ -29,7 +77,7 @@ function shortcutKeys(e) {
 function populateTable(searchString) {
   if ("content" in document.createElement("template")) {
     const tableBody = document.getElementById("contactsTableBody");
-    const templateRow = document.getElementById("contactRow");
+    const templateRow = document.getElementById("contactRowTemplate");
 
     contacts.forEach((contact) => {
       if (searchString) {
@@ -41,7 +89,6 @@ function populateTable(searchString) {
       const newRow = templateRow.content.cloneNode(true);
       let newCols = newRow.querySelectorAll("td");
       newCols.forEach((td) => {
-        console.log(td);
         if (td.id == "otherColumn") {
           if (contact["isFavorite"]) {
             td.getElementsByTagName("img")[0].src = "/assets/star-solid.svg";
@@ -70,6 +117,7 @@ function objectToString(inspectElement) {
     return "";
   }
 
+  // Question: iterate over object children? (2)
   for (let key in inspectElement) {
     if (retString) {
       retString = retString.concat(", ", objectToString(inspectElement[key]));

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/index.css" />
   </head>
   <body>
-    <div class="grid-container w-screen h-screen bg-violet-100">
+    <div class="grid-container w-screen h-screen bg-violet-50 p-4">
       <header
         id="header"
         class="grid-menu flex flex-row justify-center w-full p-2"
@@ -75,23 +75,40 @@
             </thead>
             <tbody id="contactsTableBody"></tbody>
           </table>
-          <template id="contactRow">
-            <tr>
-              <td class="py-4 px-2">name</td>
-              <td class="py-4 px-2">nickname</td>
-              <td class="py-4 px-2">email</td>
-              <td class="py-4 px-2">phone</td>
-              <td class="py-4 px-2">work_info</td>
-              <td class="py-4 px-2">address</td>
-              <td class="py-4 px-2">group</td>
-              <td class="py-4 px-2" id="otherColumn">
-                <img src="/assets/star-regular.svg" width="18" height="16" />
+          <template id="contactRowTemplate">
+            <tr id="contactRow">
+              <td class="rounded-l-md y-4 px-2">name</td>
+              <td class="y-4 px-2">nickname</td>
+              <td class="y-4 px-2">email</td>
+              <td class="y-4 px-2">phone</td>
+              <td class="y-4 px-2">work_info</td>
+              <td class="y-4 px-2">address</td>
+              <td class="y-4 px-2">group</td>
+              <td class="rounded-r-md y-4 px-2" id="otherColumn">
+                <button
+                  class="flex justify-center h-9 w-9 rounded-full hover:bg-violet-100"
+                >
+                  <img src="/assets/star-regular.svg" width="18" height="16" />
+                </button>
               </td>
             </tr>
           </template>
         </div>
       </section>
-      <section id="toolbar" class="grid-toolbar w-full"></section>
+      <section id="profileBar" class="grid-profile flex justify-center w-full">
+        <a href="https://syarifhasibuan.dev" target="_blank">
+          <div
+            class="h-full flex flex-row items-center gap-4 rounded-lg hover:bg-violet-200 p-2"
+          >
+            <img
+              class="h-10 w-10 rounded-full"
+              src="/assets/myself-close-up.jpg"
+              alt="Syarif Hasibuan"
+            />
+            <span class="font-bold text-xl text-gray-700">Syarif Hasibuan</span>
+          </div>
+        </a>
+      </section>
     </div>
     <script src="/contacts.js"></script>
     <script src="/index.js"></script>

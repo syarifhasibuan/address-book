@@ -24,6 +24,6 @@ body {
   grid-area: 2 / 2 / 3 / 4;
 }
 
-.grid-toolbar {
+.grid-profile {
   grid-area: 1 / 3 / 2 / 4;
 }
