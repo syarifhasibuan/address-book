@@ -16,6 +16,7 @@ The projects take inspiration from these websites:
 -   Static contact list
 -   Search contact by all parameter
 -   Shortcut key to focus on search bar
+-   Show favorite in an icon
 
 ## Preview
 
@@ -27,7 +28,8 @@ The projects take inspiration from these websites:
 -   [ ] Fix table row scrolling overlap with sticky header
 -   [x] Add search functionality
 -   [ ] Add profile icon on the right top
--   [ ] Add favorite star button
+-   [x] Add favorite star button
 -   [ ] Add "Add contact" button
 -   [ ] Add edit button
 -   [x] Search the whole contact field instead of just name
+-   [ ] Click on favorite star button will toggle the favorite

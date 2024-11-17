@@ -41,7 +41,14 @@ function populateTable(searchString) {
       const newRow = templateRow.content.cloneNode(true);
       let newCols = newRow.querySelectorAll("td");
       newCols.forEach((td) => {
-        td.textContent = objectToString(contact[td.textContent]);
+        console.log(td);
+        if (td.id == "otherColumn") {
+          if (contact["isFavorite"]) {
+            td.getElementsByTagName("img")[0].src = "/assets/star-solid.svg";
+          }
+        } else {
+          td.textContent = objectToString(contact[td.textContent]);
+        }
       });
       tableBody.appendChild(newRow);
     });
@@ -57,8 +64,10 @@ function stringInContact(str, contact) {
 function objectToString(inspectElement) {
   let retString = "";
   // Question: string comparison, == or === ?
-  if (typeof inspectElement != "object") {
+  if (typeof inspectElement == "string") {
     return inspectElement;
+  } else if (typeof inspectElement != "object") {
+    return "";
   }
 
   for (let key in inspectElement) {
