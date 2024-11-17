@@ -14,7 +14,7 @@ The projects take inspiration from these websites:
 ## Feature
 
 -   Static contact list
--   Search contact by name
+-   Search contact by all parameter
 -   Shortcut key to focus on search bar
 
 ## Preview
@@ -30,4 +30,4 @@ The projects take inspiration from these websites:
 -   [ ] Add favorite star button
 -   [ ] Add "Add contact" button
 -   [ ] Add edit button
--   [ ] Search the whole contact field instead of just name
+-   [x] Search the whole contact field instead of just name

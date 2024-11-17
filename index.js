@@ -21,8 +21,6 @@ searchButton.addEventListener("click", () => {
 });
 
 function shortcutKeys(e) {
-  console.log(e);
-
   if (e.ctrlKey && e.shiftKey && e.code === "KeyF") {
     searchField.focus();
   }
@@ -35,7 +33,7 @@ function populateTable(searchString) {
 
     contacts.forEach((contact) => {
       if (searchString) {
-        if (!contact.name.toLowerCase().includes(searchString.toLowerCase())) {
+        if (!stringInContact(searchString, contact)) {
           return;
         }
       }
@@ -50,10 +48,16 @@ function populateTable(searchString) {
   }
 }
 
+function stringInContact(str, contact) {
+  stringConcatenated = objectToString(contact);
+
+  return stringConcatenated.toLowerCase().includes(str.toLowerCase());
+}
+
 function objectToString(inspectElement) {
   let retString = "";
   // Question: string comparison, == or === ?
-  if (typeof inspectElement == "string" || typeof inspectElement == "boolean") {
+  if (typeof inspectElement != "object") {
     return inspectElement;
   }
 
