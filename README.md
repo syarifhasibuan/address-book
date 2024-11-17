@@ -11,6 +11,12 @@ The projects take inspiration from these websites:
 -   [Budi Gunawan's Charm](https://charm.budigunawan.com/)
 -   [Aziz Ramdan's Address Book](https://bearmentor-address-book.azizramdan.id/)
 
+## Feature
+
+-   Static contact list
+-   Search contact by name
+-   Shortcut key to focus on search bar
+
 ## Preview
 
 ![Preview](assets/preview.png)

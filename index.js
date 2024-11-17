@@ -5,6 +5,8 @@ populateTable("");
 const searchButton = document.getElementById("searchButton");
 const searchField = document.getElementById("contactSearch");
 
+document.addEventListener("keyup", shortcutKeys);
+
 // Question: Does it affect performance?
 searchField.addEventListener("keyup", ({ key }) => {
   searchString = searchField.value;
@@ -17,6 +19,14 @@ searchButton.addEventListener("click", () => {
   clearTableContent();
   populateTable(searchString);
 });
+
+function shortcutKeys(e) {
+  console.log(e);
+
+  if (e.ctrlKey && e.shiftKey && e.code === "KeyF") {
+    searchField.focus();
+  }
+}
 
 function populateTable(searchString) {
   if ("content" in document.createElement("template")) {
@@ -42,6 +52,7 @@ function populateTable(searchString) {
 
 function objectToString(inspectElement) {
   let retString = "";
+  // Question: string comparison, == or === ?
   if (typeof inspectElement == "string" || typeof inspectElement == "boolean") {
     return inspectElement;
   }
