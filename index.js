@@ -7,29 +7,24 @@ const searchField = document.getElementById("contactSearch");
 
 document.addEventListener("keyup", shortcutKeys);
 
-// document
-//   .querySelector("#contactsTableBody")
-//   .addEventListener("mouseover", (e) => {
-//     console.log(e);
-//     let tr = event.target.closest("tr");
-//     if (!tr) {
-//       return;
-//     }
-
-//     console.log(tr);
-//     // Question: iterate over object children? (1)
-//     let tds = tr.children;
-//     console.log(tds.length);
-//     for (let i = 0; i < tds.length; i++) {
-//       tds[i].classList.add("bg-violet-100");
-//     }
-//   });
-
 addListenerMulti(
   document.querySelector("#contactsTableBody"),
   "mouseover mouseout",
   toggleHighlight
 );
+
+// Question: Does it affect performance?
+searchField.addEventListener("keyup", ({ key }) => {
+  searchString = searchField.value;
+  clearTableContent();
+  populateTable(searchString);
+});
+
+searchButton.addEventListener("click", () => {
+  searchString = searchField.value;
+  clearTableContent();
+  populateTable(searchString);
+});
 
 function addListenerMulti(element, eventNames, listener) {
   let events = eventNames.split(" ");
@@ -54,19 +49,6 @@ function toggleHighlight(ev) {
     }
   }
 }
-
-// Question: Does it affect performance?
-searchField.addEventListener("keyup", ({ key }) => {
-  searchString = searchField.value;
-  clearTableContent();
-  populateTable(searchString);
-});
-
-searchButton.addEventListener("click", () => {
-  searchString = searchField.value;
-  clearTableContent();
-  populateTable(searchString);
-});
 
 function shortcutKeys(e) {
   if (e.ctrlKey && e.shiftKey && e.code === "KeyF") {
