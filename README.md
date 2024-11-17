@@ -21,3 +21,6 @@ The projects take inspiration from these websites:
 -   Fix table row scrolling overlap with sticky header
 -   Add search functionality
 -   Add profile icon on the right top
+-   Add favorite star button
+-   Add "Add contact" button
+-   Add edit button
