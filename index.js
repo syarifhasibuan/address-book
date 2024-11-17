@@ -8,11 +8,7 @@ if ("content" in document.createElement("template")) {
     const newRow = templateRow.content.cloneNode(true);
     let newCols = newRow.querySelectorAll("td");
     newCols.forEach((td) => {
-      if (typeof contact[td.textContent] == "string") {
-        td.textContent = contact[td.textContent];
-      } else if (typeof contact[td.textContent] == "object") {
-        td.textContent = objectToString(contact[td.textContent]);
-      }
+      td.textContent = objectToString(contact[td.textContent]);
     });
     tableBody.appendChild(newRow);
   });
