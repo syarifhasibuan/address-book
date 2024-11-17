@@ -34,3 +34,4 @@ The projects take inspiration from these websites:
 -   [ ] Add edit button
 -   [x] Search the whole contact field instead of just name
 -   [ ] Click on favorite star button will toggle the favorite
+-   [ ] Move favorite on top
