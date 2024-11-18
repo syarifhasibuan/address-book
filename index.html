@@ -57,36 +57,34 @@
         id="contacts"
         class="auto-rows-max flex grid-contacts w-full p-4 overflow-hidden"
       >
-        <div
-          class="flex-1 w-full h-full rounded-xl p-4 bg-white overflow-scroll"
-        >
+        <div class="flex-1 w-full h-full rounded-xl bg-white overflow-scroll">
           <table id="contactsTable" class="w-full">
             <thead class="bg-white sticky top-0">
               <tr class="text-left">
-                <th class="py-4 px-2 sticky top-0 text-gray-700">Name</th>
-                <th class="py-4 px-2 sticky top-0 text-gray-700">Nickname</th>
-                <th class="py-4 px-2 sticky top-0 text-gray-700">Email</th>
-                <th class="py-4 px-2 sticky top-0 text-gray-700">
+                <th class="sticky top-0 text-gray-700 py-6 px-4 pl-7">Name</th>
+                <th class="sticky top-0 text-gray-700 py-6 px-4">Nickname</th>
+                <th class="sticky top-0 text-gray-700 py-6 px-4">Email</th>
+                <th class="sticky top-0 text-gray-700 py-6 px-4">
                   Phone Number
                 </th>
-                <th class="py-4 px-2 sticky top-0 text-gray-700">Work Info</th>
-                <th class="py-4 px-2 sticky top-0 text-gray-700">Address</th>
-                <th class="py-4 px-2 sticky top-0 text-gray-700">Group</th>
-                <th class="py-4 px-2 sticky top-0 text-gray-700"></th>
+                <th class="sticky top-0 text-gray-700 py-6 px-4">Work Info</th>
+                <th class="sticky top-0 text-gray-700 py-6 px-4">Address</th>
+                <th class="sticky top-0 text-gray-700 py-6 px-4">Group</th>
+                <th class="sticky top-0 text-gray-700 py-6 px-4 pr-7"></th>
               </tr>
             </thead>
             <tbody id="contactsTableBody"></tbody>
           </table>
           <template id="contactRowTemplate">
             <tr id="contactRow">
-              <td class="rounded-l-md y-4 px-2 text-gray-700">name</td>
-              <td class="y-4 px-2 text-gray-700">nickname</td>
-              <td class="y-4 px-2 text-gray-700">email</td>
-              <td class="y-4 px-2 text-gray-700">phone</td>
-              <td class="y-4 px-2 text-gray-700">work_info</td>
-              <td class="y-4 px-2 text-gray-700">address</td>
-              <td class="y-4 px-2 text-gray-700">group</td>
-              <td class="rounded-r-md" id="otherColumn">
+              <td class="text-gray-700 p-4 pl-7 rounded-l-md">name</td>
+              <td class="text-gray-700 p-4">nickname</td>
+              <td class="text-gray-700 p-4">email</td>
+              <td class="text-gray-700 p-4">phone</td>
+              <td class="text-gray-700 p-4">work_info</td>
+              <td class="text-gray-700 p-4">address</td>
+              <td class="text-gray-700 p-4">group</td>
+              <td class="text-gray-700 p-4 pr-7 rounded-r-md" id="otherColumn">
                 <button
                   class="flex justify-center h-9 w-9 rounded-full hover:bg-violet-100"
                 >

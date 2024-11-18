@@ -26,7 +26,7 @@ The projects take inspiration from these websites:
 ## Todo
 
 -   [ ] Add sidebar content
--   [ ] Fix table row scrolling overlap with sticky header
+-   [x] Fix table row scrolling overlap with sticky header
 -   [x] Add search functionality
 -   [x] Add profile icon on the right top
 -   [x] Add favorite star button
