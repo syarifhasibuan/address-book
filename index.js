@@ -1,6 +1,6 @@
 ("use strict");
 
-populateTable("");
+populateTableWithSearchString("");
 
 const searchButton = document.getElementById("searchButton");
 const searchField = document.getElementById("contactSearch");
@@ -17,13 +17,13 @@ addListenerMulti(
 searchField.addEventListener("keyup", ({ key }) => {
   searchString = searchField.value;
   clearTableContent();
-  populateTable(searchString);
+  populateTableWithSearchString(searchString);
 });
 
 searchButton.addEventListener("click", () => {
   searchString = searchField.value;
   clearTableContent();
-  populateTable(searchString);
+  populateTableWithSearchString(searchString);
 });
 
 function addListenerMulti(element, eventNames, listener) {
@@ -34,8 +34,10 @@ function addListenerMulti(element, eventNames, listener) {
 }
 
 function toggleHighlight(ev) {
+  // Q: how can it understand the object event? It is in the scope?
   let tr = event.target.closest("tr");
-  let tdTarget = event.target.closest("td");
+  // Q: another method to target id?
+  let targetEvent = event.target.closest("button");
   if (!tr) {
     return;
   }
@@ -43,9 +45,11 @@ function toggleHighlight(ev) {
   // Question: iterate over object children? (1)
   let tds = tr.children;
   for (let i = 0; i < tds.length; i++) {
+    // debugger;
     if (ev.type == "mouseout") {
       tds[i].classList.remove("bg-violet-100");
-    } else if (ev.type == "mouseover" && tdTarget.id != "otherColumn") {
+      // TODO do on button instead of td
+    } else if (ev.type == "mouseover" && !targetEvent) {
       tds[i].classList.add("bg-violet-100");
     }
   }
@@ -57,7 +61,7 @@ function shortcutKeys(e) {
   }
 }
 
-function populateTable(searchString) {
+function populateTableWithSearchString(searchString) {
   if ("content" in document.createElement("template")) {
     const tableBody = document.getElementById("contactsTableBody");
     const templateRow = document.getElementById("contactRowTemplate");

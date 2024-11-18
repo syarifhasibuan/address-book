@@ -30,8 +30,10 @@ The projects take inspiration from these websites:
 -   [x] Add search functionality
 -   [x] Add profile icon on the right top
 -   [x] Add favorite star button
--   [ ] Add "Add contact" button
--   [ ] Add edit button
+-   [ ] Add "Add contact" functionality
+-   [ ] Add edit button functionality
 -   [x] Search the whole contact field instead of just name
 -   [ ] Click on favorite star button will toggle the favorite
 -   [ ] Move favorite on top
+-   [ ] Change cursor to click cursor when hovering over a row
+-   [ ] Clicking on a contact show detail of the contact

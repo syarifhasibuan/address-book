@@ -29,7 +29,24 @@
           </div>
         </a>
       </header>
-      <section id="sidebar" class="grid-sidebar w-full"></section>
+      <section id="sidebar" class="flex flex-col items-center grid-sidebar w-full p-4">
+          <button class="flex flex-row gap-4 p-4 rounded-lg hover:bg-violet-200">
+            <img
+                  src="/assets/plus-solid.svg"
+                  width="20"
+                  height="20"
+            />
+            <span class="text-2xl text-gray-700">Add Contact</span>
+          </button>
+        <div class="w-full px-2 py-4">
+          <span class="text-gray-700">Groups</span>
+        </div>
+        <div class="flex flex-col justify-start w-full ">
+          <button class="h-full w-full rounded-lg hover:bg-violet-200 text-left">
+            <span class="text-xl text-gray-700 p-2">family</span>
+          </button>
+        </div>
+      </section>
       <section
         id="search-bar"
         class="flex box-border grid-search w-full py-2 px-4"
@@ -62,13 +79,11 @@
             <thead class="bg-white sticky top-0">
               <tr class="text-left">
                 <th class="sticky top-0 text-gray-700 py-6 px-4 pl-7">Name</th>
-                <th class="sticky top-0 text-gray-700 py-6 px-4">Nickname</th>
                 <th class="sticky top-0 text-gray-700 py-6 px-4">Email</th>
                 <th class="sticky top-0 text-gray-700 py-6 px-4">
                   Phone Number
                 </th>
                 <th class="sticky top-0 text-gray-700 py-6 px-4">Work Info</th>
-                <th class="sticky top-0 text-gray-700 py-6 px-4">Address</th>
                 <th class="sticky top-0 text-gray-700 py-6 px-4">Group</th>
                 <th class="sticky top-0 text-gray-700 py-6 px-4 pr-7"></th>
               </tr>
@@ -78,14 +93,12 @@
           <template id="contactRowTemplate">
             <tr id="contactRow">
               <td class="text-gray-700 p-4 pl-7 rounded-l-md">name</td>
-              <td class="text-gray-700 p-4">nickname</td>
               <td class="text-gray-700 p-4">email</td>
               <td class="text-gray-700 p-4">phone</td>
               <td class="text-gray-700 p-4">work_info</td>
-              <td class="text-gray-700 p-4">address</td>
               <td class="text-gray-700 p-4">group</td>
               <td class="text-gray-700 p-4 pr-7 rounded-r-md" id="otherColumn">
-                <button
+                <button id="favoriteButton"
                   class="flex justify-center h-9 w-9 rounded-full hover:bg-violet-100"
                 >
                   <img src="/assets/star-regular.svg" width="18" height="16" />
