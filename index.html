@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,7 +19,7 @@
         id="header"
         class="grid-menu flex flex-row justify-center w-full p-2"
       >
-        <a href="/">
+        <a href="/" class="block">
           <div
             class="flex flex-row gap-2 p-2 justify-center gap-2"
             id="menu-bar"
@@ -29,17 +29,23 @@
           </div>
         </a>
       </header>
+
       <section
         id="sidebar"
         class="flex flex-col items-center grid-sidebar w-full p-4"
       >
-        <button class="flex flex-row gap-4 p-4 rounded-lg hover:bg-violet-200">
+        <a
+          href="/new"
+          class="flex flex-row gap-4 p-4 rounded-lg hover:bg-violet-200"
+        >
           <img src="/assets/plus-solid.svg" width="20" height="20" />
           <span class="text-2xl text-gray-700">Add Contact</span>
-        </button>
+        </a>
+
         <div class="w-full px-2 py-4">
           <span class="text-gray-700">Groups</span>
         </div>
+
         <div class="flex flex-col justify-start w-full">
           <button
             class="h-full w-full rounded-lg hover:bg-violet-200 text-left"
@@ -47,6 +53,7 @@
             <span class="text-xl text-gray-700 p-2">family</span>
           </button>
         </div>
+
         <template id="groupTemplate">
           <div class="flex flex-col justify-start w-full">
             <button
@@ -62,18 +69,21 @@
           </div>
         </template>
       </section>
+
       <section
         id="search-bar"
         class="flex box-border grid-search w-full py-2 px-4"
       >
-        <div
+        <form
+          id="search-form"
           class="flex flex-row gap-2 rounded-lg bg-white border-2 box-border w-full max-w-md py-2 px-4"
         >
+          <label for="contactSearch" class="sr-only">Search</label>
           <input
             type="search"
             id="contactSearch"
             name="contact-search"
-            placeholder="Search (Ctrl+Shift+f)"
+            placeholder="Search contacts..."
             class="bg-transparent w-full focus:outline-none"
           />
           <button
@@ -83,8 +93,9 @@
           >
             <img src="/assets/magnifier.svg" alt="Search" class="h-6 w-6" />
           </button>
-        </div>
+        </form>
       </section>
+
       <section
         id="contacts"
         class="auto-rows-max flex grid-contacts w-full p-4 overflow-hidden"
@@ -105,6 +116,7 @@
             </thead>
             <tbody id="contactsTableBody"></tbody>
           </table>
+
           <template id="contactRowTemplate">
             <tr id="contactRow">
               <td class="text-gray-700 p-4 pl-7 rounded-l-md">name</td>
@@ -124,6 +136,7 @@
           </template>
         </div>
       </section>
+
       <section id="profileBar" class="grid-profile flex justify-center w-full">
         <a href="https://syarifhasibuan.dev" target="_blank">
           <div
@@ -134,11 +147,12 @@
               src="/assets/myself-close-up.jpg"
               alt="Syarif Hasibuan"
             />
-            <span class="font-bold text-xl text-gray-700">Syarif Hasibuan</span>
+            <span class="font-bold text-md text-gray-700">Syarif Hasibuan</span>
           </div>
         </a>
       </section>
     </div>
+
     <script src="/contacts.js"></script>
     <script src="/index.js"></script>
   </body>
