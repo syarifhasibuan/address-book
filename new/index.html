@@ -7,5 +7,79 @@
   </head>
   <body>
     <h1>Add New Contact</h1>
+    <form
+      method="post"
+      id="addContactForm"
+      class="max-w-md mx-auto p-4 bg-white rounded-md shadow-md"
+    >
+      <div class="mb-4">
+        <label for="name" class="block text-gray-700 text-sm font-bold mb-2"
+          >Name:</label
+        >
+        <input
+          required
+          type="text"
+          id="name"
+          name="name"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700 text-sm font-bold mb-2"
+          >Email:</label
+        >
+        <input
+          required
+          type="email"
+          id="email"
+          name="email"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="phone" class="block text-gray-700 text-sm font-bold mb-2"
+          >Phone:</label
+        >
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="jobTitle" class="block text-gray-700 text-sm font-bold mb-2"
+          >Job Title:</label
+        >
+        <input
+          type="text"
+          id="jobTitle"
+          name="jobTitle"
+          required
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="group" class="block text-gray-700 text-sm font-bold mb-2"
+          >Group:</label
+        >
+        <input
+          type="text"
+          id="group"
+          name="group"
+          required
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        />
+      </div>
+      <button
+        type="submit"
+        class="bg-violet-500 hover:bg-violet-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+      >
+        Add Contact
+      </button>
+    </form>
+
+    <script src="/scripts/new.js"></script>
   </body>
 </html>
