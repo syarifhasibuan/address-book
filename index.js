@@ -1,5 +1,3 @@
-"use strict";
-
 populateTableWithSearchString("");
 
 const searchButton = document.getElementById("searchButton");
@@ -21,7 +19,7 @@ for (let i = 0; i < 3; i++) {
 }
 
 addListenerMulti(
-  document.querySelector("#contactsTableBody"),
+  document.querySelector("#contact-items"),
   "mouseover mouseout",
   toggleHighlight
 );
@@ -76,7 +74,7 @@ function shortcutKeys(e) {
 
 function populateTableWithSearchString(searchString) {
   if ("content" in document.createElement("template")) {
-    const tableBody = document.getElementById("contactsTableBody");
+    const tableBody = document.getElementById("contact-items");
     const templateRow = document.getElementById("contactRowTemplate");
 
     contacts.forEach((contact) => {
@@ -90,7 +88,7 @@ function populateTableWithSearchString(searchString) {
       let newCols = newRow.querySelectorAll("td");
       newCols.forEach((td) => {
         if (td.id == "otherColumn") {
-          if (contact["isFavorite"]) {
+          if (contact["isFavorited"]) {
             td.getElementsByTagName("img")[0].src = "/assets/star-solid.svg";
           }
         } else {
@@ -141,7 +139,7 @@ function objectToString(inspectElement, delimiter_key) {
 }
 
 function clearTableContent() {
-  tableBody = document.getElementById("contactsTableBody");
+  tableBody = document.getElementById("contact-items");
   while (tableBody.lastElementChild) {
     tableBody.removeChild(tableBody.lastElementChild);
   }

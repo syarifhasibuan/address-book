@@ -22,7 +22,7 @@ const contacts = [
     },
     group: "",
     created_at: "2021-08-15",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Jane Smith",
@@ -46,7 +46,7 @@ const contacts = [
     },
     group: "friends",
     created_at: "2019-11-23",
-    isFavorite: true,
+    isFavorited: true,
   },
   {
     name: "Alice Johnson",
@@ -70,7 +70,7 @@ const contacts = [
     },
     group: "work",
     created_at: "2018-07-30",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Bob Brown",
@@ -94,7 +94,7 @@ const contacts = [
     },
     group: "family",
     created_at: "2020-03-12",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Charlie Davis",
@@ -118,7 +118,7 @@ const contacts = [
     },
     group: "friends",
     created_at: "2017-09-05",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Diana Evans",
@@ -142,7 +142,7 @@ const contacts = [
     },
     group: "work",
     created_at: "2018-12-20",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Ethan Foster",
@@ -166,7 +166,7 @@ const contacts = [
     },
     group: "",
     created_at: "2017-04-18",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Fiona Green",
@@ -190,7 +190,7 @@ const contacts = [
     },
     group: "friends",
     created_at: "2016-08-29",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "George Harris",
@@ -214,7 +214,7 @@ const contacts = [
     },
     group: "work",
     created_at: "2015-11-11",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Hannah Irving",
@@ -238,7 +238,7 @@ const contacts = [
     },
     group: "",
     created_at: "2016-02-25",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Ian Jackson",
@@ -262,7 +262,7 @@ const contacts = [
     },
     group: "friends",
     created_at: "2017-06-14",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Julia King",
@@ -286,7 +286,7 @@ const contacts = [
     },
     group: "work",
     created_at: "2018-10-03",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Kevin Lewis",
@@ -310,7 +310,7 @@ const contacts = [
     },
     group: "",
     created_at: "2019-01-19",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Laura Miller",
@@ -334,7 +334,7 @@ const contacts = [
     },
     group: "friends",
     created_at: "2020-05-07",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Michael Nelson",
@@ -358,7 +358,7 @@ const contacts = [
     },
     group: "work",
     created_at: "2021-09-21",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Nina Owens",
@@ -382,7 +382,7 @@ const contacts = [
     },
     group: "",
     created_at: "2022-12-15",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Oscar Perez",
@@ -406,7 +406,7 @@ const contacts = [
     },
     group: "friends",
     created_at: "2023-03-28",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Paula Quinn",
@@ -430,7 +430,7 @@ const contacts = [
     },
     group: "work",
     created_at: "2022-07-11",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Quincy Roberts",
@@ -454,7 +454,7 @@ const contacts = [
     },
     group: "",
     created_at: "2021-11-30",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Rachel Scott",
@@ -478,7 +478,7 @@ const contacts = [
     },
     group: "friends",
     created_at: "2020-02-17",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Sam Taylor",
@@ -502,7 +502,7 @@ const contacts = [
     },
     group: "work",
     created_at: "2019-06-25",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Tina Underwood",
@@ -526,7 +526,7 @@ const contacts = [
     },
     group: "",
     created_at: "2018-10-09",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Ursula Vance",
@@ -550,7 +550,7 @@ const contacts = [
     },
     group: "friends",
     created_at: "2017-01-03",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Victor White",
@@ -574,7 +574,7 @@ const contacts = [
     },
     group: "work",
     created_at: "2016-05-22",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Wendy Xander",
@@ -598,7 +598,7 @@ const contacts = [
     },
     group: "",
     created_at: "2015-09-14",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Xander Young",
@@ -622,7 +622,7 @@ const contacts = [
     },
     group: "friends",
     created_at: "2016-12-01",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Yvonne Zane",
@@ -646,7 +646,7 @@ const contacts = [
     },
     group: "work",
     created_at: "2017-03-19",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Zachary Adams",
@@ -670,7 +670,7 @@ const contacts = [
     },
     group: "",
     created_at: "2018-07-04",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Ava Baker",
@@ -694,7 +694,7 @@ const contacts = [
     },
     group: "friends",
     created_at: "2019-11-27",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Ben Carter",
@@ -718,7 +718,7 @@ const contacts = [
     },
     group: "work",
     created_at: "2020-02-14",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Chloe Davis",
@@ -742,7 +742,7 @@ const contacts = [
     },
     group: "",
     created_at: "2021-06-01",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "David Evans",
@@ -766,7 +766,7 @@ const contacts = [
     },
     group: "friends",
     created_at: "2022-09-18",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Ella Foster",
@@ -790,7 +790,7 @@ const contacts = [
     },
     group: "work",
     created_at: "2023-12-05",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Frank Green",
@@ -814,7 +814,7 @@ const contacts = [
     },
     group: "",
     created_at: "2022-03-22",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Grace Harris",
@@ -838,7 +838,7 @@ const contacts = [
     },
     group: "friends",
     created_at: "2021-07-10",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Henry Irving",
@@ -862,7 +862,7 @@ const contacts = [
     },
     group: "work",
     created_at: "2020-11-29",
-    isFavorite: false,
+    isFavorited: false,
   },
   {
     name: "Isla Jackson",
@@ -881,7 +881,7 @@ const contacts = [
     address: {},
     group: "family",
     created_at: "2019-02-16",
-    isFavorite: true,
+    isFavorited: true,
   },
 ];
 
