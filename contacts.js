@@ -4,19 +4,17 @@ const contacts = [
     nickname: "Johnny",
     email: "john@doe.com",
     phone: {
-      to_string_delimiter: "",
+      // TODO: move this from the contact list
       country_code: "+1",
       area_code: "",
       phone_number: "123-456-7890",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Software Engineer",
       department: "Engineering",
       company: "Acme Inc.",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "123 Main St",
       city: "Anytown",
       state: "USA",
@@ -31,19 +29,16 @@ const contacts = [
     nickname: "Janey",
     email: "jane@smith.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "234-567-8901",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Product Manager",
       department: "Product",
       company: "Tech Solutions",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "456 Elm St",
       city: "Othertown",
       state: "USA",
@@ -58,19 +53,16 @@ const contacts = [
     nickname: "Ally",
     email: "alice@johnson.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "345-678-9012",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "UX Designer",
       department: "Design",
       company: "Creative Co.",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "789 Oak St",
       city: "Sometown",
       state: "USA",
@@ -85,19 +77,16 @@ const contacts = [
     nickname: "Bobby",
     email: "bob@brown.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "456-789-0123",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Data Analyst",
       department: "Analytics",
       company: "Data Corp.",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "101 Pine St",
       city: "Anycity",
       state: "USA",
@@ -112,19 +101,16 @@ const contacts = [
     nickname: "Chuck",
     email: "charlie@davis.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "567-890-1234",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Marketing Specialist",
       department: "Marketing",
       company: "Market Masters",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "202 Maple St",
       city: "Newtown",
       state: "USA",
@@ -139,19 +125,16 @@ const contacts = [
     nickname: "Di",
     email: "diana@evans.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "678-901-2345",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "HR Manager",
       department: "Human Resources",
       company: "People First",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "303 Birch St",
       city: "Oldtown",
       state: "USA",
@@ -166,19 +149,16 @@ const contacts = [
     nickname: "E",
     email: "ethan@foster.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "789-012-3456",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Sales Executive",
       department: "Sales",
       company: "Salesforce",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "404 Cedar St",
       city: "Smalltown",
       state: "USA",
@@ -193,19 +173,16 @@ const contacts = [
     nickname: "Fi",
     email: "fiona@green.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "890-123-4567",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Content Writer",
       department: "Content",
       company: "Write Right",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "505 Spruce St",
       city: "Bigcity",
       state: "USA",
@@ -220,19 +197,16 @@ const contacts = [
     nickname: "Geo",
     email: "george@harris.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "901-234-5678",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Project Manager",
       department: "Projects",
       company: "Manage It",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "606 Fir St",
       city: "Largetown",
       state: "USA",
@@ -247,19 +221,16 @@ const contacts = [
     nickname: "Han",
     email: "hannah@irving.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "012-345-6789",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Operations Manager",
       department: "Operations",
       company: "Ops Inc.",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "707 Redwood St",
       city: "Middletown",
       state: "USA",
@@ -274,19 +245,16 @@ const contacts = [
     nickname: "IJ",
     email: "ian@jackson.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "123-456-7891",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Financial Analyst",
       department: "Finance",
       company: "Finance Pro",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "808 Willow St",
       city: "Uptown",
       state: "USA",
@@ -301,19 +269,16 @@ const contacts = [
     nickname: "Jules",
     email: "julia@king.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "234-567-8902",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Customer Support",
       department: "Support",
       company: "Help Desk",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "909 Aspen St",
       city: "Downtown",
       state: "USA",
@@ -328,19 +293,16 @@ const contacts = [
     nickname: "Kev",
     email: "kevin@lewis.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "345-678-9013",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "IT Specialist",
       department: "IT",
       company: "Tech Support",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "1010 Poplar St",
       city: "Suburbia",
       state: "USA",
@@ -355,19 +317,16 @@ const contacts = [
     nickname: "Laurie",
     email: "laura@miller.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "456-789-0124",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Graphic Designer",
       department: "Design",
       company: "Design Studio",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "1111 Cypress St",
       city: "Metropolis",
       state: "USA",
@@ -382,19 +341,16 @@ const contacts = [
     nickname: "Mike",
     email: "michael@nelson.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "567-890-1235",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Business Analyst",
       department: "Business",
       company: "Biz Solutions",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "1212 Palm St",
       city: "Capital City",
       state: "USA",
@@ -409,19 +365,16 @@ const contacts = [
     nickname: "Nini",
     email: "nina@owens.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "678-901-2346",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Recruiter",
       department: "HR",
       company: "Hire Me",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "1313 Magnolia St",
       city: "Seaside",
       state: "USA",
@@ -436,19 +389,16 @@ const contacts = [
     nickname: "Ozzy",
     email: "oscar@perez.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "789-012-3457",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Accountant",
       department: "Finance",
       company: "Money Matters",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "1414 Dogwood St",
       city: "Lakeside",
       state: "USA",
@@ -463,19 +413,16 @@ const contacts = [
     nickname: "PQ",
     email: "paula@quinn.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "890-123-4568",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Legal Advisor",
       department: "Legal",
       company: "Law Firm",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "1515 Cherry St",
       city: "Riverside",
       state: "USA",
@@ -490,19 +437,16 @@ const contacts = [
     nickname: "Q",
     email: "quincy@roberts.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "901-234-5679",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Research Scientist",
       department: "Research",
       company: "Lab Co.",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "1616 Walnut St",
       city: "Hilltop",
       state: "USA",
@@ -517,19 +461,16 @@ const contacts = [
     nickname: "Rach",
     email: "rachel@scott.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "012-345-6780",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Event Planner",
       department: "Events",
       company: "Eventful",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "1717 Maple St",
       city: "Valley",
       state: "USA",
@@ -544,19 +485,16 @@ const contacts = [
     nickname: "Sammy",
     email: "sam@taylor.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "123-456-7892",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Logistics Coordinator",
       department: "Logistics",
       company: "LogiCo",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "1818 Pine St",
       city: "Mountain",
       state: "USA",
@@ -571,19 +509,16 @@ const contacts = [
     nickname: "T",
     email: "tina@underwood.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "234-567-8903",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Public Relations",
       department: "PR",
       company: "PR Pros",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "1919 Birch St",
       city: "Forest",
       state: "USA",
@@ -598,19 +533,16 @@ const contacts = [
     nickname: "Urs",
     email: "ursula@vance.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "345-678-9014",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Quality Assurance",
       department: "QA",
       company: "Quality Check",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "2020 Cedar St",
       city: "Desert",
       state: "USA",
@@ -625,19 +557,16 @@ const contacts = [
     nickname: "Vic",
     email: "victor@white.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "456-789-0125",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Security Specialist",
       department: "Security",
       company: "Secure It",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "2121 Redwood St",
       city: "Oasis",
       state: "USA",
@@ -652,19 +581,16 @@ const contacts = [
     nickname: "Wen",
     email: "wendy@xander.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "567-890-1236",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Supply Chain Manager",
       department: "Supply Chain",
       company: "Supply Co.",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "2222 Willow St",
       city: "Harbor",
       state: "USA",
@@ -679,19 +605,16 @@ const contacts = [
     nickname: "Xan",
     email: "xander@young.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "678-901-2347",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Technical Writer",
       department: "Documentation",
       company: "DocuWrite",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "2323 Aspen St",
       city: "Bay",
       state: "USA",
@@ -706,19 +629,16 @@ const contacts = [
     nickname: "Yve",
     email: "yvonne@zane.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "789-012-3458",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Product Owner",
       department: "Product",
       company: "ProdCo",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "2424 Poplar St",
       city: "Cove",
       state: "USA",
@@ -733,19 +653,16 @@ const contacts = [
     nickname: "Zach",
     email: "zachary@adams.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "890-123-4569",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Network Engineer",
       department: "IT",
       company: "NetCo",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "2525 Cypress St",
       city: "Shore",
       state: "USA",
@@ -760,19 +677,16 @@ const contacts = [
     nickname: "Avie",
     email: "ava@baker.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "901-234-5670",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Social Media Manager",
       department: "Marketing",
       company: "Socialize",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "2626 Cherry St",
       city: "Cliff",
       state: "USA",
@@ -787,19 +701,16 @@ const contacts = [
     nickname: "Benny",
     email: "ben@carter.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "012-345-6781",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "DevOps Engineer",
       department: "Engineering",
       company: "DevOps Co.",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "2727 Maple St",
       city: "Hill",
       state: "USA",
@@ -814,19 +725,16 @@ const contacts = [
     nickname: "Chlo",
     email: "chloe@davis.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "123-456-7893",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "HR Specialist",
       department: "HR",
       company: "HR Solutions",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "2828 Pine St",
       city: "Peak",
       state: "USA",
@@ -841,19 +749,16 @@ const contacts = [
     nickname: "Dave",
     email: "david@evans.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "234-567-8904",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Software Tester",
       department: "QA",
       company: "TestCo",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "2929 Birch St",
       city: "Summit",
       state: "USA",
@@ -868,19 +773,16 @@ const contacts = [
     nickname: "Ellie",
     email: "ella@foster.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "345-678-9015",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Business Development",
       department: "Business",
       company: "BizDev",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "3030 Cedar St",
       city: "Crest",
       state: "USA",
@@ -895,19 +797,16 @@ const contacts = [
     nickname: "Frankie",
     email: "frank@green.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "456-789-0126",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Systems Administrator",
       department: "IT",
       company: "SysAdmin Co.",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "3131 Redwood St",
       city: "Bluff",
       state: "USA",
@@ -922,19 +821,16 @@ const contacts = [
     nickname: "Gracie",
     email: "grace@harris.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "567-890-1237",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Marketing Coordinator",
       department: "Marketing",
       company: "MarketCo",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "3232 Willow St",
       city: "Ridge",
       state: "USA",
@@ -949,19 +845,16 @@ const contacts = [
     nickname: "Hank",
     email: "henry@irving.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "678-901-2348",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Operations Specialist",
       department: "Operations",
       company: "OpsCo",
     },
     address: {
-      to_string_delimiter: ", ",
       street: "3333 Aspen St",
       city: "Plateau",
       state: "USA",
@@ -976,22 +869,24 @@ const contacts = [
     nickname: "Izzy",
     email: "isla@jackson.com",
     phone: {
-      to_string_delimiter: "",
       country_code: "+1",
       area_code: "",
       phone_number: "789-012-3459",
     },
     work_info: {
-      to_string_delimiter: ", ",
       job_title: "Financial Planner",
       department: "Finance",
       company: "FinanceCo",
     },
-    address: {
-      to_string_delimiter: ", ",
-    },
+    address: {},
     group: "family",
     created_at: "2019-02-16",
     isFavorite: true,
   },
 ];
+
+const contactsConfig = {
+  phone_to_string_delimiter: "-",
+  address_to_string_delimiter: ", ",
+  work_info_to_string_delimiter: ", ",
+};

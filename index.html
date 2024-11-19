@@ -29,23 +29,38 @@
           </div>
         </a>
       </header>
-      <section id="sidebar" class="flex flex-col items-center grid-sidebar w-full p-4">
-          <button class="flex flex-row gap-4 p-4 rounded-lg hover:bg-violet-200">
-            <img
-                  src="/assets/plus-solid.svg"
-                  width="20"
-                  height="20"
-            />
-            <span class="text-2xl text-gray-700">Add Contact</span>
-          </button>
+      <section
+        id="sidebar"
+        class="flex flex-col items-center grid-sidebar w-full p-4"
+      >
+        <button class="flex flex-row gap-4 p-4 rounded-lg hover:bg-violet-200">
+          <img src="/assets/plus-solid.svg" width="20" height="20" />
+          <span class="text-2xl text-gray-700">Add Contact</span>
+        </button>
         <div class="w-full px-2 py-4">
           <span class="text-gray-700">Groups</span>
         </div>
-        <div class="flex flex-col justify-start w-full ">
-          <button class="h-full w-full rounded-lg hover:bg-violet-200 text-left">
+        <div class="flex flex-col justify-start w-full">
+          <button
+            class="h-full w-full rounded-lg hover:bg-violet-200 text-left"
+          >
             <span class="text-xl text-gray-700 p-2">family</span>
           </button>
         </div>
+        <template id="groupTemplate">
+          <div class="flex flex-col justify-start w-full">
+            <button
+              class="flex flex-row h-full w-full rounded-lg hover:bg-violet-200 text-left m-2 ml-7"
+            >
+              <img
+                src="/assets/address-card-solid.svg"
+                height="32"
+                width="32"
+              />
+              <span class="text-xl text-gray-700 p-2">groupName</span>
+            </button>
+          </div>
+        </template>
       </section>
       <section
         id="search-bar"
@@ -98,7 +113,8 @@
               <td class="text-gray-700 p-4">work_info</td>
               <td class="text-gray-700 p-4">group</td>
               <td class="text-gray-700 p-4 pr-7 rounded-r-md" id="otherColumn">
-                <button id="favoriteButton"
+                <button
+                  id="favoriteButton"
                   class="flex justify-center h-9 w-9 rounded-full hover:bg-violet-100"
                 >
                   <img src="/assets/star-regular.svg" width="18" height="16" />

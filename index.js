@@ -7,6 +7,19 @@ const searchField = document.getElementById("contactSearch");
 
 document.addEventListener("keyup", shortcutKeys);
 
+for (let i = 0; i < 3; i++) {
+  if ("content" in document.createElement("template")) {
+    templateGroup = document.getElementById("groupTemplate");
+    sidebar = document.getElementById("sidebar");
+
+    const newGroup = templateGroup.content.cloneNode(true);
+
+    console.log(templateGroup);
+    console.log(sidebar);
+    sidebar.append(newGroup);
+  }
+}
+
 addListenerMulti(
   document.querySelector("#contactsTableBody"),
   "mouseover mouseout",
@@ -81,7 +94,10 @@ function populateTableWithSearchString(searchString) {
             td.getElementsByTagName("img")[0].src = "/assets/star-solid.svg";
           }
         } else {
-          td.textContent = objectToString(contact[td.textContent]);
+          td.textContent = objectToString(
+            contact[td.textContent],
+            "".concat(td.textContent, "_to_string_delimiter")
+          );
         }
       });
       tableBody.appendChild(newRow);
@@ -90,13 +106,16 @@ function populateTableWithSearchString(searchString) {
 }
 
 function stringInContact(str, contact) {
-  stringConcatenated = objectToString(contact);
+  stringConcatenated = objectToString(contact, "");
 
   return stringConcatenated.toLowerCase().includes(str.toLowerCase());
 }
 
-function objectToString(inspectElement) {
+function objectToString(inspectElement, delimiter_key) {
   let retString = "";
+  delimiter = contactsConfig[delimiter_key]
+    ? contactsConfig[delimiter_key]
+    : "";
 
   // Question: string comparison, == or === ?
   if (typeof inspectElement == "string") {
@@ -105,18 +124,14 @@ function objectToString(inspectElement) {
     return "";
   }
 
-  // console.log(inspectElement);
   // Question: iterate over object children? (2)
   for (let key in inspectElement) {
-    if (key == "to_string_delimiter") {
-      continue;
-    }
-
+    // debugger;
     if (retString) {
-      retString = retString.concat(
-        inspectElement.to_string_delimiter,
-        objectToString(inspectElement[key])
-      );
+      let strToConcat = objectToString(inspectElement[key], delimiter_key);
+      if (strToConcat) {
+        retString = retString.concat(delimiter, strToConcat);
+      }
     } else {
       retString = inspectElement[key];
     }
