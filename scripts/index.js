@@ -1,7 +1,10 @@
 function renderContacts() {
-  const contactItemsElement = document.getElementById("contact-items");
+  const url = new URL(window.location.href);
+  const queryText = url.searchParams.get("q")?.trim() || "";
 
-  const contactItemsElementToRender = contacts
+  const contactItems = !queryText ? contactsData : searchContacts(queryText);
+
+  const contactItemsElementToRender = contactItems
     .map((contact) => {
       return `
 <tr id="contactRow">
@@ -26,7 +29,14 @@ function renderContacts() {
     })
     .join("");
 
+  const contactItemsElement = document.getElementById("contact-items");
   contactItemsElement.innerHTML = contactItemsElementToRender;
+}
+
+function searchContacts(queryText) {
+  return contactsData.filter((contact) => {
+    return contact.name.toLowerCase().includes(queryText.toLowerCase());
+  });
 }
 
 renderContacts();

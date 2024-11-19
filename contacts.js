@@ -1,4 +1,4 @@
-const contacts = [
+const contactsData = [
   {
     name: "John Doe",
     nickname: "Johnny",
