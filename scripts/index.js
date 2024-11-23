@@ -37,6 +37,35 @@ function renderContacts() {
   contactItemsElement.innerHTML = contactItemsElementToRender;
 }
 
+function renderSidebar() {
+  const groupDiv = document.getElementById("group-list");
+  const contactsData = JSON.parse(localStorage.getItem("contactsData"));
+
+  const uniqueGroups = contactsData
+    .map((contact) => contact.group)
+    .filter((group, index, array) => index === array.indexOf(group))
+    .filter((group) => group != "");
+
+  const sidebarGroupToRender = uniqueGroups
+    .map((groupName) => {
+      return `
+      <div class="flex flex-col justify-start w-full">
+        <button
+          class="h-full flex flex-row w-full rounded-lg hover:bg-violet-200 text-left pl-4"
+        >
+          <img src="/assets/address-card-solid.svg" height="24" width="24" />
+          <span class="text-xl text-gray-700 p-2">${groupName}</span>
+        </button>
+      </div>
+    `;
+    })
+    .join("");
+
+  const groupListElement = document.getElementById("group-list");
+  groupListElement.innerHTML =
+    groupListElement.innerHTML + sidebarGroupToRender;
+}
+
 function searchContacts(queryText) {
   return contactsData.filter((contact) => {
     return contact.name.toLowerCase().includes(queryText.toLowerCase());
@@ -61,3 +90,4 @@ function joinObjectContent(object, delimiter) {
 const contactsData = loadContactsData();
 
 renderContacts();
+renderSidebar();
