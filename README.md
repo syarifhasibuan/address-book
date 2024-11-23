@@ -19,6 +19,7 @@ The projects take inspiration from these websites:
 -   Show favorite in an icon
 -   Highlight the contact that you are hovering
 -   Sort by name alphabetically
+-   Add new contact
 
 ## Preview
 
@@ -31,10 +32,11 @@ The projects take inspiration from these websites:
 -   [x] Add search functionality
 -   [x] Add profile icon on the right top
 -   [x] Add favorite star button
--   [ ] Add "Add contact" functionality
+-   [x] Add "Add contact" functionality
 -   [ ] Add edit button functionality
 -   [x] Search the whole contact field instead of just name
 -   [ ] Click on favorite star button will toggle the favorite
 -   [ ] Move favorite on top
 -   [ ] Change cursor to click cursor when hovering over a row
 -   [ ] Clicking on a contact show detail of the contact
+-   [ ] Fix the new contact page form to be more readable
