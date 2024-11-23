@@ -16,7 +16,7 @@ function renderContacts() {
     .sort((a, b) => a.name.localeCompare(b.name))
     .map((contact) => {
       return `
-<tr id="contact-row" class="hover:cursor-pointer hover:bg-violet-100">
+<tr id="contact-row" onclick="window.location='/contact/?id=${contact.id}';" class="hover:cursor-pointer hover:bg-violet-100">
   <td class="text-gray-700 p-4 pl-7 rounded-l-md">
   ${contact.name}
   </td>
