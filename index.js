@@ -87,7 +87,7 @@ function populateTableWithSearchString(searchString) {
       const newRow = templateRow.content.cloneNode(true);
       let newCols = newRow.querySelectorAll("td");
       newCols.forEach((td) => {
-        if (td.id == "otherColumn") {
+        if (td.id == "other-column") {
           if (contact["isFavorited"]) {
             td.getElementsByTagName("img")[0].src = "/assets/star-solid.svg";
           }

@@ -1,10 +1,9 @@
-const contactsData = [
+const contactsDefault = [
   {
     name: "John Doe",
     nickname: "Johnny",
     email: "john@doe.com",
     phone: {
-      // TODO: move this from the contact list
       country_code: "+1",
       area_code: "",
       phone_number: "123-456-7890",

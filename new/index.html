@@ -1,85 +1,209 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add New Contact</title>
+    <title>Rolodex</title>
+    <meta
+      name="description"
+      content="A modern address book inspired by traditional address book"
+    />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/index.css" />
   </head>
   <body>
-    <h1>Add New Contact</h1>
-    <form
-      method="post"
-      id="addContactForm"
-      class="max-w-md mx-auto p-4 bg-white rounded-md shadow-md"
-    >
-      <div class="mb-4">
-        <label for="name" class="block text-gray-700 text-sm font-bold mb-2"
-          >Name:</label
-        >
-        <input
-          required
-          type="text"
-          id="name"
-          name="name"
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        />
-      </div>
-      <div class="mb-4">
-        <label for="email" class="block text-gray-700 text-sm font-bold mb-2"
-          >Email:</label
-        >
-        <input
-          required
-          type="email"
-          id="email"
-          name="email"
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        />
-      </div>
-      <div class="mb-4">
-        <label for="phone" class="block text-gray-700 text-sm font-bold mb-2"
-          >Phone:</label
-        >
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          required
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        />
-      </div>
-      <div class="mb-4">
-        <label for="jobTitle" class="block text-gray-700 text-sm font-bold mb-2"
-          >Job Title:</label
-        >
-        <input
-          type="text"
-          id="jobTitle"
-          name="jobTitle"
-          required
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        />
-      </div>
-      <div class="mb-4">
-        <label for="group" class="block text-gray-700 text-sm font-bold mb-2"
-          >Group:</label
-        >
-        <input
-          type="text"
-          id="group"
-          name="group"
-          required
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        />
-      </div>
-      <button
-        type="submit"
-        class="bg-violet-500 hover:bg-violet-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+    <div class="grid-container w-screen h-screen bg-violet-50 p-4">
+      <header
+        id="header"
+        class="grid-menu flex flex-row justify-center w-full p-2"
       >
-        Add Contact
-      </button>
-    </form>
+        <a href="/" class="block">
+          <div
+            class="flex flex-row gap-2 p-2 justify-center gap-2"
+            id="menu-bar"
+          >
+            <img src="/favicon.svg" width="32" height="32" />
+            <h1 class="font-bold text-2xl text-gray-700">Rolodex</h1>
+          </div>
+        </a>
+      </header>
 
-    <script src="/scripts/new.js"></script>
+      <section
+        id="sidebar"
+        class="flex flex-col items-center grid-sidebar w-full p-4"
+      >
+        <a
+          href="/new"
+          class="flex flex-row gap-4 p-4 rounded-lg hover:bg-violet-200"
+        >
+          <img src="/assets/plus-solid.svg" width="20" height="20" />
+          <span class="text-2xl text-gray-700">Add Contact</span>
+        </a>
+
+        <div class="w-full px-2 py-4">
+          <span class="text-gray-700">Groups</span>
+        </div>
+
+        <div class="flex flex-col justify-start w-full">
+          <button
+            class="h-full w-full rounded-lg hover:bg-violet-200 text-left"
+          >
+            <span class="text-xl text-gray-700 p-2">family</span>
+          </button>
+        </div>
+
+        <template id="groupTemplate">
+          <div class="flex flex-col justify-start w-full">
+            <button
+              class="flex flex-row h-full w-full rounded-lg hover:bg-violet-200 text-left m-2 ml-7"
+            >
+              <img
+                src="/assets/address-card-solid.svg"
+                height="32"
+                width="32"
+              />
+              <span class="text-xl text-gray-700 p-2">groupName</span>
+            </button>
+          </div>
+        </template>
+      </section>
+
+      <section
+        id="search-bar"
+        class="flex box-border grid-search w-full py-2 px-4"
+      >
+        <form
+          method="get"
+          id="search-form"
+          class="flex flex-row gap-2 rounded-lg bg-white border-2 box-border w-full max-w-md py-2 px-4"
+        >
+          <label for="contactSearch" class="sr-only">Search</label>
+          <input
+            type="search"
+            id="contactSearch"
+            name="q"
+            placeholder="Search contacts..."
+            class="bg-transparent w-full focus:outline-none"
+          />
+          <button
+            id="searchButton"
+            type="button"
+            class="flex items-center justify-center"
+          >
+            <img src="/assets/magnifier.svg" alt="Search" class="h-6 w-6" />
+          </button>
+        </form>
+      </section>
+
+      <section
+        id="add-form"
+        class="auto-rows-max flex grid-contacts w-full p-4 overflow-hidden"
+      >
+        <div class="flex-1 w-full h-full rounded-xl bg-white overflow-scroll">
+          <form
+            method="post"
+            id="addContactForm"
+            class="max-w-md mx-auto p-4 bg-white rounded-md shadow-md"
+          >
+            <div class="mb-4">
+              <label
+                for="name"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Name:</label
+              >
+              <input
+                required
+                type="text"
+                id="name"
+                name="name"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="email"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Email:</label
+              >
+              <input
+                required
+                type="email"
+                id="email"
+                name="email"
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="phone"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Phone:</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="jobTitle"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Job Title:</label
+              >
+              <input
+                type="text"
+                id="jobTitle"
+                name="jobTitle"
+                required
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="group"
+                class="block text-gray-700 text-sm font-bold mb-2"
+                >Group:</label
+              >
+              <input
+                type="text"
+                id="group"
+                name="group"
+                required
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
+            <button
+              type="submit"
+              class="bg-violet-500 hover:bg-violet-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            >
+              Add Contact
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section id="profile-bar" class="grid-profile flex justify-center w-full">
+        <a href="https://syarifhasibuan.dev" target="_blank">
+          <div
+            class="h-full flex flex-row items-center gap-4 rounded-lg hover:bg-violet-200 p-2"
+          >
+            <img
+              class="h-10 w-10 rounded-full"
+              src="/assets/myself-close-up.jpg"
+              alt="Syarif Hasibuan"
+            />
+            <span class="font-bold text-md text-gray-700">Syarif Hasibuan</span>
+          </div>
+        </a>
+      </section>
+    </div>
+
+    <script src="/contacts.js"></script>
+    <script src="/scripts/index.js"></script>
   </body>
 </html>
