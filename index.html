@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -53,21 +53,6 @@
             <span class="text-xl text-gray-700 p-2">family</span>
           </button>
         </div>
-
-        <template id="groupTemplate">
-          <div class="flex flex-col justify-start w-full">
-            <button
-              class="flex flex-row h-full w-full rounded-lg hover:bg-violet-200 text-left m-2 ml-7"
-            >
-              <img
-                src="/assets/address-card-solid.svg"
-                height="32"
-                width="32"
-              />
-              <span class="text-xl text-gray-700 p-2">groupName</span>
-            </button>
-          </div>
-        </template>
       </section>
 
       <section
@@ -79,17 +64,17 @@
           id="search-form"
           class="flex flex-row gap-2 rounded-lg bg-white border-2 box-border w-full max-w-md py-2 px-4"
         >
-          <label for="contactSearch" class="sr-only">Search</label>
+          <label for="contact-search" class="sr-only">Search</label>
           <input
             type="search"
-            id="contactSearch"
+            id="contact-search"
             name="q"
             placeholder="Search contacts..."
             class="bg-transparent w-full focus:outline-none"
           />
           <button
             id="searchButton"
-            type="button"
+            type="submit"
             class="flex items-center justify-center"
           >
             <img src="/assets/magnifier.svg" alt="Search" class="h-6 w-6" />
@@ -138,7 +123,7 @@
       </section>
     </div>
 
-    <script src="/contacts.js"></script>
+    <script src="/scripts/defaultContacts.js"></script>
     <script src="/scripts/index.js"></script>
   </body>
 </html>

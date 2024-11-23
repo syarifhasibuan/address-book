@@ -5,6 +5,7 @@ function renderContacts() {
   const contactItems = !queryText ? contactsData : searchContacts(queryText);
 
   const contactItemsElementToRender = contactItems
+    .sort((a, b) => a.name.localeCompare(b.name))
     .map((contact) => {
       return `
 <tr id="contact-row" class="hover:bg-violet-100">
@@ -14,7 +15,7 @@ function renderContacts() {
   <td class="text-gray-700 p-4">${contact.email}</td>
   <td class="text-gray-700 p-4">${joinObjectContent(contact.phone, "-")}</td>
   <td class="text-gray-700 p-4">${joinObjectContent(
-    contact.work_info,
+    contact.workInfo,
     ", "
   )}</td>
   <td class="text-gray-700 p-4">${contact.group}</td>
@@ -42,7 +43,7 @@ function searchContacts(queryText) {
   });
 }
 
-function getContactsData() {
+function loadContactsData() {
   if (localStorage.getItem("contactsData")) {
     return JSON.parse(localStorage.getItem("contactsData"));
   } else {
@@ -57,6 +58,6 @@ function joinObjectContent(object, delimiter) {
     .join(delimiter);
 }
 
-const contactsData = getContactsData();
+const contactsData = loadContactsData();
 
 renderContacts();
