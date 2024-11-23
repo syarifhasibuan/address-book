@@ -20,6 +20,7 @@ The projects take inspiration from these websites:
 -   Highlight the contact that you are hovering
 -   Sort by name alphabetically
 -   Add new contact
+-   Search by group
 
 ## Preview
 
@@ -27,7 +28,7 @@ The projects take inspiration from these websites:
 
 ## Todos
 
--   [ ] Add sidebar content
+-   [x] Add sidebar content
 -   [x] Fix table row scrolling overlap with sticky header
 -   [x] Add search functionality
 -   [x] Add profile icon on the right top
