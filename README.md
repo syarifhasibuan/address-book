@@ -24,7 +24,7 @@ The projects take inspiration from these websites:
 
 ## Preview
 
-![Preview](assets/preview.png)
+![Preview](resources/preview.png)
 
 ## Todos
 
