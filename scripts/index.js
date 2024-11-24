@@ -14,9 +14,16 @@ function renderContacts() {
 
   const contactItemsElementToRender = contactItems
     .sort((a, b) => a.name.localeCompare(b.name))
+    .sort((a, b) => {
+      if (a.isFavorited && !b.isFavorited) return -1;
+      if (!a.isFavorited && b.isFavorited) return 1;
+      return a.name.localeCompare(b.name);
+    })
     .map((contact) => {
       return `
-<tr id="contact-row" onclick="window.location='/contact/?id=${contact.id}';" class="hover:cursor-pointer hover:bg-violet-100">
+<tr id="contact-row" onclick="window.location='/contact/?id=${
+        contact.id
+      }';" class="hover:cursor-pointer hover:bg-violet-100">
   <td class="text-gray-700 p-4 pl-7 rounded-l-md">
   ${contact.name}
   </td>

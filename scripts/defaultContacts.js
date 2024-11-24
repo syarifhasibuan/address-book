@@ -22,7 +22,7 @@ const contactsDefault = [
     },
     group: "friends",
     createdAt: "2022-09-18",
-    isFavorited: false,
+    isFavorited: true,
   },
   {
     id: "2",
@@ -347,7 +347,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2018-10-09",
-    isFavorited: false,
+    isFavorited: true,
   },
   {
     id: "15",
@@ -622,7 +622,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2023-12-05",
-    isFavorited: false,
+    isFavorited: true,
   },
   {
     id: "26",
