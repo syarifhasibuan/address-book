@@ -29,9 +29,20 @@ function renderSidebar() {
 
 function loadContactsData() {
   if (localStorage.getItem("contactsData")) {
-    return JSON.parse(localStorage.getItem("contactsData"));
+    const contactsData = JSON.parse(localStorage.getItem("contactsData"));
+
+    return contactsData.map((contact) => {
+      return { ...contact, createdAt: new Date(contact.createdAt) };
+    });
   } else {
-    localStorage.setItem("contactsData", JSON.stringify(contactsDefault));
+    const modifiedContactsDefault = contactsDefault.map((contact) => {
+      return { ...contact, createdAt: new Date(contact.createdAt) };
+    });
+
+    localStorage.setItem(
+      "contactsData",
+      JSON.stringify(modifiedContactsDefault)
+    );
     return contactsDefault;
   }
 }

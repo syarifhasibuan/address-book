@@ -5,10 +5,6 @@ addContactFormElement.addEventListener("submit", (event) => {
 
   const contactsData = JSON.parse(localStorage.getItem("contactsData"));
   const formData = new FormData(addContactFormElement);
-  const today = new Date();
-  const formattedTodayDate = `${today.getFullYear()}-${
-    today.getMonth() + 1
-  }-${today.getDate()}`;
 
   const newId = contactsData[contactsData.length - 1].id + 1;
 
@@ -34,7 +30,7 @@ addContactFormElement.addEventListener("submit", (event) => {
       zip: "",
     },
     group: formData.get("group") || "",
-    createdAt: formattedTodayDate,
+    createdAt: new Date(),
     isFavorited: false,
   };
 
