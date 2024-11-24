@@ -22,10 +22,10 @@ const contactsDefault = [
     },
     group: "friends",
     createdAt: "2022-09-18",
-    isFavorited: true,
+    isFavorited: false,
   },
   {
-    id: "2",
+    id: 2,
     name: "Grace Harris",
     nickname: "Gracie",
     email: "grace@harris.com",
@@ -50,7 +50,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "3",
+    id: 3,
     name: "Oscar Perez",
     nickname: "Ozzy",
     email: "oscar@perez.com",
@@ -75,7 +75,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "4",
+    id: 4,
     name: "Henry Irving",
     nickname: "Hank",
     email: "henry@irving.com",
@@ -347,7 +347,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2018-10-09",
-    isFavorited: true,
+    isFavorited: false,
   },
   {
     id: "15",
@@ -500,7 +500,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "21",
+    id: 21,
     name: "Ava Baker",
     nickname: "Avie",
     email: "ava@baker.com",
@@ -525,7 +525,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "22",
+    id: 22,
     name: "Ben Carter",
     nickname: "Benny",
     email: "ben@carter.com",
@@ -622,7 +622,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2023-12-05",
-    isFavorited: true,
+    isFavorited: false,
   },
   {
     id: "26",
@@ -720,6 +720,6 @@ const contactsDefault = [
     address: {},
     group: "family",
     createdAt: "2019-02-16",
-    isFavorited: true,
+    isFavorited: false,
   },
 ];

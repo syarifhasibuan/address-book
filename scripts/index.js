@@ -21,7 +21,9 @@ function renderContacts() {
     })
     .map((contact) => {
       return `
-      <div class="flex flex-row p-4 gap-4">
+      <a
+        href="/contact/?id=${contact.id}"
+        class="flex flex-row p-4 gap-4 hover:cursor-pointer hover:bg-violet-100">
         <div class="flex-1 text-lg font-semibold text-gray-800">
           ${contact.name}
         </div>
@@ -39,16 +41,17 @@ function renderContacts() {
         </div>
         <div class="flex-1">
           <button
-            onclick="toggleFavorite('${contact.id}')"
-            class="flex justify-center rounded-full hover:bg-violet-100">
-            <img src="${
-              contact.isFavorited
-                ? "/assets/star-solid.svg"
-                : "/assets/star-regular.svg"
-            }" width="18" height="16" />
+            data-id="${contact.id}"
+            onclick="toggleFavorite(event)"
+            class="flex items-center size-10 justify-center rounded-full hover:bg-violet-300">
+            <img data-id="${contact.id}" src="${
+        contact.isFavorited
+          ? "/assets/star-solid.svg"
+          : "/assets/star-regular.svg"
+      }" width="18" height="16" />
           </button>
         </div>
-      </div>`;
+      </a>`;
     })
     .join("");
 
@@ -72,6 +75,23 @@ function joinObjectContent(object, delimiter) {
   return Object.values(object)
     .filter((x) => x)
     .join(delimiter);
+}
+
+function toggleFavorite(event) {
+  event.stopPropagation();
+  event.preventDefault();
+
+  const id = event.target.dataset.id;
+
+  const contact = contactsData.find(
+    (contactItem) => contactItem.id === parseInt(id)
+  );
+
+  contact.isFavorited = !contact.isFavorited;
+
+  localStorage.setItem("contactsData", JSON.stringify(contactsData));
+
+  renderContacts();
 }
 
 renderContacts();
