@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -79,23 +79,23 @@
         class="auto-rows-max flex grid-contacts w-full p-4 overflow-hidden"
       >
         <div class="flex-1 w-full h-full rounded-xl bg-white overflow-scroll">
-          <table id="contactsTable" class="w-full">
-            <thead class="bg-white sticky top-0">
-              <tr class="text-left">
-                <th class="sticky top-0 text-gray-700 py-6 px-4 pl-7">Name</th>
-                <th class="sticky top-0 text-gray-700 py-6 px-4">Email</th>
-                <th class="sticky top-0 text-gray-700 py-6 px-4">
+          <div id="contactsTable" class="w-full">
+            <div class="bg-white sticky top-0">
+              <div class="flex flex-row text-left p-4 gap-4">
+                <div class="flex-1 sticky top-0 text-gray-700">Name</div>
+                <div class="flex-1 sticky top-0 text-gray-700">Email</div>
+                <div class="flex-1 sticky top-0 text-gray-700">
                   Phone Number
-                </th>
-                <th class="sticky top-0 text-gray-700 py-6 px-4">Work Info</th>
-                <th class="sticky top-0 text-gray-700 py-6 px-4">Group</th>
-                <th class="sticky top-0 text-gray-700 py-6 px-4 pr-7"></th>
-              </tr>
-            </thead>
-            <tbody id="contact-items">
+                </div>
+                <div class="flex-1 sticky top-0 text-gray-700">Work Info</div>
+                <div class="flex-1 sticky top-0 text-gray-700">Group</div>
+                <div class="flex-1 sticky top-0 text-gray-700"></div>
+              </div>
+            </div>
+            <div id="contact-items">
               <!-- RENDER CONTACTS -->
-            </tbody>
-          </table>
+            </div>
+          </div>
         </div>
       </section>
 

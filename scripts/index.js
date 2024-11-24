@@ -21,30 +21,34 @@ function renderContacts() {
     })
     .map((contact) => {
       return `
-<tr id="contact-row" onclick="window.location='/contact/?id=${
-        contact.id
-      }';" class="hover:cursor-pointer hover:bg-violet-100">
-  <td class="text-gray-700 p-4 pl-7 rounded-l-md">
-  ${contact.name}
-  </td>
-  <td class="text-gray-700 p-4">${contact.email}</td>
-  <td class="text-gray-700 p-4">${joinObjectContent(contact.phone, "-")}</td>
-  <td class="text-gray-700 p-4">${joinObjectContent(
-    contact.workInfo,
-    ", "
-  )}</td>
-  <td class="text-gray-700 p-4">${contact.group}</td>
-  <td class="text-gray-700 p-4 pr-7 rounded-r-md" id="other-column">
-    <button class="flex justify-center h-9 w-9 rounded-full hover:bg-violet-100"
-    >
-    <img src="${
-      contact.isFavorited
-        ? "/assets/star-solid.svg"
-        : "/assets/star-regular.svg"
-    }" width="18" height="16" />
-    </button>
-  </td>
-</tr>`;
+      <div class="flex flex-row p-4 gap-4">
+        <div class="flex-1 text-lg font-semibold text-gray-800">
+          ${contact.name}
+        </div>
+        <div class="flex-1 text-sm text-gray-600">
+          ${contact.email}
+        </div>
+        <div class="flex-1 text-sm text-gray-600">
+          ${joinObjectContent(contact.phone, "-")}
+        </div>
+        <div class="flex-1 text-sm text-gray-600">
+          ${joinObjectContent(contact.workInfo, ", ")}
+        </div>
+        <div class="flex-1 text-sm text-gray-600">
+          ${contact.group}
+        </div>
+        <div class="flex-1">
+          <button
+            onclick="toggleFavorite('${contact.id}')"
+            class="flex justify-center rounded-full hover:bg-violet-100">
+            <img src="${
+              contact.isFavorited
+                ? "/assets/star-solid.svg"
+                : "/assets/star-regular.svg"
+            }" width="18" height="16" />
+          </button>
+        </div>
+      </div>`;
     })
     .join("");
 
