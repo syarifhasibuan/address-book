@@ -1,6 +1,6 @@
 const contactsDefault = [
   {
-    id: "1",
+    id: 1,
     name: "David Evans",
     nickname: "Dave",
     email: "david@evans.com",
@@ -703,7 +703,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "29",
+    id: 29,
     name: "Isla Jackson",
     nickname: "Izzy",
     email: "isla@jackson.com",

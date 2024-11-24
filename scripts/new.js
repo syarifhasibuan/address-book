@@ -1,7 +1,8 @@
 const addContactFormElement = document.getElementById("addContactForm");
-const searchForm = document.getElementById("search-form");
 
 addContactFormElement.addEventListener("submit", (event) => {
+  event.preventDefault();
+
   const contactsData = JSON.parse(localStorage.getItem("contactsData"));
   const formData = new FormData(addContactFormElement);
   const today = new Date();
@@ -9,13 +10,7 @@ addContactFormElement.addEventListener("submit", (event) => {
     today.getMonth() + 1
   }-${today.getDate()}`;
 
-  const newId = (
-    contactsData.reduce(
-      (accumulator, current) =>
-        accumulator > parseInt(current.id) ? accumulator : parseInt(current.id),
-      0
-    ) + 1
-  ).toString();
+  const newId = contactsData[contactsData.length - 1].id + 1;
 
   const newContactData = {
     id: newId,
@@ -29,8 +24,8 @@ addContactFormElement.addEventListener("submit", (event) => {
     },
     workInfo: {
       jobTitle: formData.get("job-title") || "",
-      jobDepartment: formData.get("department") || "",
-      companyName: formData.get("company-name") || "",
+      department: formData.get("department") || "",
+      company: formData.get("company-name") || "",
     },
     address: {
       street: "",
@@ -46,16 +41,6 @@ addContactFormElement.addEventListener("submit", (event) => {
   contactsData.push(newContactData);
 
   localStorage.setItem("contactsData", JSON.stringify(contactsData));
-});
 
-searchForm.addEventListener("submit", (event) => {
-  // Question: is this a good method?
-  event.preventDefault();
-
-  const url = new URL(window.location.href);
-  const formData = new FormData(searchForm);
-
-  const searchText = "?q=" + formData.get("q").trim();
-
-  window.location.href = url.origin + "/" + searchText;
+  window.location.href = `/contact/?id=${newContactData.id}`;
 });
