@@ -20,4 +20,16 @@ function renderContact() {
   contactContainerElement.innerHTML = elementToRender;
 }
 
+searchForm.addEventListener("submit", (event) => {
+  // Question: is this a good method?
+  event.preventDefault();
+
+  const url = new URL(window.location.href);
+  const formData = new FormData(searchForm);
+
+  const searchText = "?q=" + formData.get("q").trim();
+
+  window.location.href = url.origin + "/" + searchText;
+});
+
 renderContact();

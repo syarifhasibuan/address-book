@@ -2,8 +2,6 @@ const addContactFormElement = document.getElementById("addContactForm");
 const searchForm = document.getElementById("search-form");
 
 addContactFormElement.addEventListener("submit", (event) => {
-  event.preventDefault();
-
   const contactsData = JSON.parse(localStorage.getItem("contactsData"));
   const formData = new FormData(addContactFormElement);
   const today = new Date();
@@ -16,8 +14,6 @@ addContactFormElement.addEventListener("submit", (event) => {
       accumulator > parseInt(current.id) ? accumulator : parseInt(current.id)
     ) + 1
   ).toString();
-
-  console.log(newId);
 
   const newContactData = {
     id: newId,
