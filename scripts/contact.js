@@ -20,6 +20,8 @@ function renderContact() {
   contactContainerElement.innerHTML = elementToRender;
 }
 
+const searchForm = document.getElementById("search-form");
+
 searchForm.addEventListener("submit", (event) => {
   // Question: is this a good method?
   event.preventDefault();
