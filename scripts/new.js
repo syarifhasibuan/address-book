@@ -10,8 +10,10 @@ addContactFormElement.addEventListener("submit", (event) => {
   }-${today.getDate()}`;
 
   const newId = (
-    contactsData.reduce((accumulator, current) =>
-      accumulator > parseInt(current.id) ? accumulator : parseInt(current.id)
+    contactsData.reduce(
+      (accumulator, current) =>
+        accumulator > parseInt(current.id) ? accumulator : parseInt(current.id),
+      0
     ) + 1
   ).toString();
 
