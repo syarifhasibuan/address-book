@@ -100,7 +100,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "5",
+    id: 5,
     name: "Ian Jackson",
     nickname: "IJ",
     email: "ian@jackson.com",
@@ -125,7 +125,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "6",
+    id: 6,
     name: "John Doe",
     nickname: "Johnny",
     email: "john@doe.com",
@@ -150,7 +150,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "7",
+    id: 7,
     name: "Kevin Lewis",
     nickname: "Kev",
     email: "kevin@lewis.com",
@@ -175,7 +175,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "8",
+    id: 8,
     name: "Michael Nelson",
     nickname: "Mike",
     email: "michael@nelson.com",
@@ -200,7 +200,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "9",
+    id: 9,
     name: "Nina Owens",
     nickname: "Nini",
     email: "nina@owens.com",
@@ -225,7 +225,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "10",
+    id: 10,
     name: "Paula Quinn",
     nickname: "PQ",
     email: "paula@quinn.com",
@@ -250,7 +250,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "11",
+    id: 11,
     name: "Quincy Roberts",
     nickname: "Q",
     email: "quincy@roberts.com",
@@ -275,7 +275,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "12",
+    id: 12,
     name: "Rachel Scott",
     nickname: "Rach",
     email: "rachel@scott.com",
@@ -300,7 +300,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "13",
+    id: 13,
     name: "Sam Taylor",
     nickname: "Sammy",
     email: "sam@taylor.com",
@@ -325,7 +325,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "14",
+    id: 14,
     name: "Tina Underwood",
     nickname: "T",
     email: "tina@underwood.com",
@@ -350,7 +350,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "15",
+    id: 15,
     name: "Ursula Vance",
     nickname: "Urs",
     email: "ursula@vance.com",
@@ -375,7 +375,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "16",
+    id: 16,
     name: "Victor White",
     nickname: "Vic",
     email: "victor@white.com",
@@ -400,7 +400,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "17",
+    id: 17,
     name: "Wendy Xander",
     nickname: "Wen",
     email: "wendy@xander.com",
@@ -425,7 +425,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "18",
+    id: 18,
     name: "Xander Young",
     nickname: "Xan",
     email: "xander@young.com",
@@ -450,7 +450,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "19",
+    id: 19,
     name: "Yvonne Zane",
     nickname: "Yve",
     email: "yvonne@zane.com",
@@ -475,7 +475,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "20",
+    id: 20,
     name: "Zachary Adams",
     nickname: "Zach",
     email: "zachary@adams.com",
@@ -550,7 +550,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "23",
+    id: 23,
     name: "Chloe Davis",
     nickname: "Chlo",
     email: "chloe@davis.com",
@@ -575,7 +575,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "24",
+    id: 24,
     name: "Diana Evans",
     nickname: "Di",
     email: "diana@evans.com",
@@ -600,7 +600,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "25",
+    id: 25,
     name: "Ella Foster",
     nickname: "Ellie",
     email: "ella@foster.com",
@@ -625,7 +625,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "26",
+    id: 26,
     name: "Frank Green",
     nickname: "Frankie",
     email: "frank@green.com",
@@ -650,7 +650,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "27",
+    id: 27,
     name: "George Harris",
     nickname: "Geo",
     email: "george@harris.com",
@@ -675,7 +675,7 @@ const contactsDefault = [
     isFavorited: false,
   },
   {
-    id: "28",
+    id: 28,
     name: "Hannah Irving",
     nickname: "Han",
     email: "hannah@irving.com",
