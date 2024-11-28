@@ -128,7 +128,7 @@ const contactsDefault = [
     id: 6,
     name: "John Doe",
     nickname: "Johnny",
-    email: "john@doe.com",
+    email: "",
     phone: {
       countryCode: "+1",
       areaCode: "",
@@ -396,7 +396,7 @@ const contactsDefault = [
       zip: "80808",
     },
     group: "work",
-    createdAt: "2016-05-22",
+    createdAt: "2024-11-27",
     isFavorited: false,
   },
   {
@@ -421,7 +421,7 @@ const contactsDefault = [
       zip: "90909",
     },
     group: "",
-    createdAt: "2015-09-14",
+    createdAt: "2024-09-14",
     isFavorited: false,
   },
   {
