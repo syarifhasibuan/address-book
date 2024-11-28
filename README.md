@@ -44,3 +44,5 @@ The projects take inspiration from these websites:
 -   [x] Click on favorite button will toggle the favorite
 -   [ ] Edit contact form
 -   [ ] Fix the new contact page form to be more readable
+-   [ ] Add mandatory legend besides label for required input
+-   [ ] Add peer message for uncompliant Input
