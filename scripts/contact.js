@@ -24,7 +24,31 @@ function renderContact() {
 
   const elementToRender = `
 <div class="p-8 max-w-4xl">
-  <h1 id="full-name" class="text-3xl pb-1">${contact.name}</h1>
+  <div class="flex flex-row justify-between">
+    <h1 id="full-name" class="text-3xl pb-1">${contact.name}</h1>
+    <div class="flex flex-row">
+      <button
+        data-id="${contact.id}"
+        onclick="toggleFavorite(event)"
+        class="flex items-center size-10 justify-center rounded-full hover:bg-violet-300">
+        <img data-id="${contact.id}" src="${
+          contact.isFavorited
+            ? "/assets/star-solid.svg"
+            : "/assets/star-regular.svg"
+        }" width="18" height="16" />
+      </button>
+      <button
+        data-id="${contact.id}"
+        onclick="event.stopPropagation(); event.preventDefault(); window.location.href='/edit/?id=${
+          contact.id
+        }'"
+        class="flex items-center size-10 justify-center rounded-full hover:bg-violet-300">
+        <img data-id="${
+          contact.id
+        }" src="/assets/pen-to-square-solid.svg" width="16" height="16" />
+      </button>
+    </div>
+  </div>
   <p>
     ${
       !!contact.workInfo.jobTitle
@@ -156,6 +180,26 @@ function renderContact() {
 
   const contactContainerElement = document.getElementById("contact-content");
   contactContainerElement.innerHTML = elementToRender;
+}
+
+function toggleFavorite(event) {
+  event.stopPropagation();
+  event.preventDefault();
+
+  const url = new URL(window.location.href);
+  const idParams = url.searchParams.get("id");
+  const id = idParams;
+
+  const contact = contactsData.find(
+    (contactItem) => contactItem.id === parseInt(id)
+  );
+  console.log(contact);
+
+  contact.isFavorited = !contact.isFavorited;
+
+  localStorage.setItem("contactsData", JSON.stringify(contactsData));
+
+  renderContact();
 }
 
 renderContact();

@@ -24,6 +24,7 @@ The projects take inspiration from these websites:
 -   Contact detail page
 -   Creation info with relative moment from now
 -   Edit contact
+-   Favorite and edit from contact page
 
 ## Preview
 
