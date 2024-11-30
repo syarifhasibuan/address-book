@@ -7,7 +7,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "234-567-8904",
+      phoneNumber: "2345678904",
     },
     workInfo: {
       jobTitle: "Software Tester",
@@ -33,7 +33,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "567-890-1237",
+      phoneNumber: "5678901237",
     },
     workInfo: {
       jobTitle: "Marketing Coordinator",
@@ -59,7 +59,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "789-012-3457",
+      phoneNumber: "7890123457",
     },
     workInfo: {
       jobTitle: "Accountant",
@@ -85,7 +85,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "678-901-2348",
+      phoneNumber: "6789012348",
     },
     workInfo: {
       jobTitle: "Operations Specialist",
@@ -111,7 +111,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "123-456-7891",
+      phoneNumber: "1234567891",
     },
     workInfo: {
       jobTitle: "Financial Analyst",
@@ -137,7 +137,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "123-456-7890",
+      phoneNumber: "1234567890",
     },
     workInfo: {
       jobTitle: "Software Engineer",
@@ -163,7 +163,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "345-678-9013",
+      phoneNumber: "3456789013",
     },
     workInfo: {
       jobTitle: "IT Specialist",
@@ -189,7 +189,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "567-890-1235",
+      phoneNumber: "5678901235",
     },
     workInfo: {
       jobTitle: "Business Analyst",
@@ -215,7 +215,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "678-901-2346",
+      phoneNumber: "6789012346",
     },
     workInfo: {
       jobTitle: "Recruiter",
@@ -241,7 +241,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "890-123-4568",
+      phoneNumber: "8901234568",
     },
     workInfo: {
       jobTitle: "Legal Advisor",
@@ -267,7 +267,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "901-234-5679",
+      phoneNumber: "9012345679",
     },
     workInfo: {
       jobTitle: "Research Scientist",
@@ -293,7 +293,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "012-345-6780",
+      phoneNumber: "0123456780",
     },
     workInfo: {
       jobTitle: "Event Planner",
@@ -319,7 +319,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "123-456-7892",
+      phoneNumber: "1234567892",
     },
     workInfo: {
       jobTitle: "Logistics Coordinator",
@@ -345,7 +345,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "234-567-8903",
+      phoneNumber: "2345678903",
     },
     workInfo: {
       jobTitle: "Public Relations",
@@ -371,7 +371,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "345-678-9014",
+      phoneNumber: "3456789014",
     },
     workInfo: {
       jobTitle: "Quality Assurance",
@@ -397,7 +397,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "456-789-0125",
+      phoneNumber: "4567890125",
     },
     workInfo: {
       jobTitle: "Security Specialist",
@@ -423,7 +423,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "567-890-1236",
+      phoneNumber: "5678901236",
     },
     workInfo: {
       jobTitle: "Supply Chain Manager",
@@ -449,7 +449,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "678-901-2347",
+      phoneNumber: "6789012347",
     },
     workInfo: {
       jobTitle: "Technical Writer",
@@ -475,7 +475,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "789-012-3458",
+      phoneNumber: "7890123458",
     },
     workInfo: {
       jobTitle: "Product Owner",
@@ -501,7 +501,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "890-123-4569",
+      phoneNumber: "8901234569",
     },
     workInfo: {
       jobTitle: "Network Engineer",
@@ -527,7 +527,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "901-234-5670",
+      phoneNumber: "9012345670",
     },
     workInfo: {
       jobTitle: "Social Media Manager",
@@ -553,7 +553,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "012-345-6781",
+      phoneNumber: "0123456781",
     },
     workInfo: {
       jobTitle: "DevOps Engineer",
@@ -579,7 +579,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "123-456-7893",
+      phoneNumber: "1234567893",
     },
     workInfo: {
       jobTitle: "HR Specialist",
@@ -605,7 +605,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "678-901-2345",
+      phoneNumber: "6789012345",
     },
     workInfo: {
       jobTitle: "HR Manager",
@@ -631,7 +631,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "345-678-9015",
+      phoneNumber: "3456789015",
     },
     workInfo: {
       jobTitle: "Business Development",
@@ -657,7 +657,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "456-789-0126",
+      phoneNumber: "4567890126",
     },
     workInfo: {
       jobTitle: "Systems Administrator",
@@ -683,7 +683,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "901-234-5678",
+      phoneNumber: "9012345678",
     },
     workInfo: {
       jobTitle: "Project Manager",
@@ -712,7 +712,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "678-901-2348",
+      phoneNumber: "6789012348",
     },
     workInfo: {
       jobTitle: "Operations Specialist",
@@ -738,7 +738,7 @@ const contactsDefault = [
     phone: {
       countryCode: "+62",
       areaCode: "",
-      phoneNumber: "789-012-3459",
+      phoneNumber: "7890123459",
     },
     workInfo: {
       jobTitle: "Financial Planner",
