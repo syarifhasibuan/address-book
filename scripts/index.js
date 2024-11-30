@@ -39,16 +39,26 @@ function renderContacts() {
         <div class="flex-1 text-sm text-gray-600">
           ${contact.group}
         </div>
-        <div class="flex-1">
+        <div class="flex-1 flex flex-row gap-1">
           <button
             data-id="${contact.id}"
             onclick="toggleFavorite(event)"
             class="flex items-center size-10 justify-center rounded-full hover:bg-violet-300">
             <img data-id="${contact.id}" src="${
-        contact.isFavorited
-          ? "/assets/star-solid.svg"
-          : "/assets/star-regular.svg"
-      }" width="18" height="16" />
+              contact.isFavorited
+                ? "/assets/star-solid.svg"
+                : "/assets/star-regular.svg"
+            }" width="18" height="16" />
+          </button>
+          <button
+            data-id="${contact.id}"
+            onclick="event.stopPropagation(); event.preventDefault(); window.location.href='/edit/?id=${
+              contact.id
+            }'"
+            class="flex items-center size-10 justify-center rounded-full hover:bg-violet-300">
+            <img data-id="${
+              contact.id
+            }" src="/assets/pen-to-square-solid.svg" width="16" height="16" />
           </button>
         </div>
       </a>`;

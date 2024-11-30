@@ -5,7 +5,7 @@ const contactsDefault = [
     nickname: "Dave",
     email: "david@evans.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "234-567-8904",
     },
@@ -22,6 +22,7 @@ const contactsDefault = [
     },
     group: "friends",
     createdAt: "2022-09-18",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -30,7 +31,7 @@ const contactsDefault = [
     nickname: "Gracie",
     email: "grace@harris.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "567-890-1237",
     },
@@ -47,6 +48,7 @@ const contactsDefault = [
     },
     group: "friends",
     createdAt: "2021-07-10",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -55,7 +57,7 @@ const contactsDefault = [
     nickname: "Ozzy",
     email: "oscar@perez.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "789-012-3457",
     },
@@ -72,6 +74,7 @@ const contactsDefault = [
     },
     group: "friends",
     createdAt: "2023-03-28",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -80,7 +83,7 @@ const contactsDefault = [
     nickname: "Hank",
     email: "henry@irving.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "678-901-2348",
     },
@@ -97,6 +100,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2020-11-29",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -105,7 +109,7 @@ const contactsDefault = [
     nickname: "IJ",
     email: "ian@jackson.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "123-456-7891",
     },
@@ -122,6 +126,7 @@ const contactsDefault = [
     },
     group: "friends",
     createdAt: "2017-06-14",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -130,7 +135,7 @@ const contactsDefault = [
     nickname: "Johnny",
     email: "",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "123-456-7890",
     },
@@ -147,6 +152,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2021-08-15",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -155,7 +161,7 @@ const contactsDefault = [
     nickname: "Kev",
     email: "kevin@lewis.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "345-678-9013",
     },
@@ -172,6 +178,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2019-01-19",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -180,7 +187,7 @@ const contactsDefault = [
     nickname: "Mike",
     email: "michael@nelson.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "567-890-1235",
     },
@@ -197,6 +204,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2021-09-21",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -205,7 +213,7 @@ const contactsDefault = [
     nickname: "Nini",
     email: "nina@owens.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "678-901-2346",
     },
@@ -222,6 +230,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2022-12-15",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -230,7 +239,7 @@ const contactsDefault = [
     nickname: "PQ",
     email: "paula@quinn.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "890-123-4568",
     },
@@ -247,6 +256,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2022-07-11",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -255,7 +265,7 @@ const contactsDefault = [
     nickname: "Q",
     email: "quincy@roberts.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "901-234-5679",
     },
@@ -272,6 +282,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2021-11-30",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -280,7 +291,7 @@ const contactsDefault = [
     nickname: "Rach",
     email: "rachel@scott.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "012-345-6780",
     },
@@ -297,6 +308,7 @@ const contactsDefault = [
     },
     group: "friends",
     createdAt: "2020-02-17",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -305,7 +317,7 @@ const contactsDefault = [
     nickname: "Sammy",
     email: "sam@taylor.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "123-456-7892",
     },
@@ -322,6 +334,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2019-06-25",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -330,7 +343,7 @@ const contactsDefault = [
     nickname: "T",
     email: "tina@underwood.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "234-567-8903",
     },
@@ -347,6 +360,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2018-10-09",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -355,7 +369,7 @@ const contactsDefault = [
     nickname: "Urs",
     email: "ursula@vance.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "345-678-9014",
     },
@@ -372,6 +386,7 @@ const contactsDefault = [
     },
     group: "friends",
     createdAt: "2017-01-03",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -380,7 +395,7 @@ const contactsDefault = [
     nickname: "Vic",
     email: "victor@white.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "456-789-0125",
     },
@@ -397,6 +412,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2024-11-27",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -405,7 +421,7 @@ const contactsDefault = [
     nickname: "Wen",
     email: "wendy@xander.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "567-890-1236",
     },
@@ -422,6 +438,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2024-09-14",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -430,7 +447,7 @@ const contactsDefault = [
     nickname: "Xan",
     email: "xander@young.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "678-901-2347",
     },
@@ -447,6 +464,7 @@ const contactsDefault = [
     },
     group: "friends",
     createdAt: "2016-12-01",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -455,7 +473,7 @@ const contactsDefault = [
     nickname: "Yve",
     email: "yvonne@zane.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "789-012-3458",
     },
@@ -472,6 +490,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2017-03-19",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -480,7 +499,7 @@ const contactsDefault = [
     nickname: "Zach",
     email: "zachary@adams.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "890-123-4569",
     },
@@ -497,6 +516,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2018-07-04",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -505,7 +525,7 @@ const contactsDefault = [
     nickname: "Avie",
     email: "ava@baker.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "901-234-5670",
     },
@@ -522,6 +542,7 @@ const contactsDefault = [
     },
     group: "friends",
     createdAt: "2019-11-27",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -530,7 +551,7 @@ const contactsDefault = [
     nickname: "Benny",
     email: "ben@carter.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "012-345-6781",
     },
@@ -547,6 +568,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2020-02-14",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -555,7 +577,7 @@ const contactsDefault = [
     nickname: "Chlo",
     email: "chloe@davis.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "123-456-7893",
     },
@@ -572,6 +594,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2021-06-01",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -580,7 +603,7 @@ const contactsDefault = [
     nickname: "Di",
     email: "diana@evans.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "678-901-2345",
     },
@@ -597,6 +620,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2018-12-20",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -605,7 +629,7 @@ const contactsDefault = [
     nickname: "Ellie",
     email: "ella@foster.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "345-678-9015",
     },
@@ -622,6 +646,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2023-12-05",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -630,7 +655,7 @@ const contactsDefault = [
     nickname: "Frankie",
     email: "frank@green.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "456-789-0126",
     },
@@ -647,6 +672,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2022-03-22",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -655,7 +681,7 @@ const contactsDefault = [
     nickname: "Geo",
     email: "george@harris.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "901-234-5678",
     },
@@ -672,6 +698,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2015-11-11",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -683,7 +710,7 @@ const contactsDefault = [
     nickname: "Hank",
     email: "henry@irving.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "678-901-2348",
     },
@@ -700,6 +727,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2020-11-29",
+    modifiedAt: "",
     isFavorited: false,
   },
   {
@@ -708,7 +736,7 @@ const contactsDefault = [
     nickname: "Izzy",
     email: "isla@jackson.com",
     phone: {
-      countryCode: "+1",
+      countryCode: "+62",
       areaCode: "",
       phoneNumber: "789-012-3459",
     },
@@ -720,6 +748,7 @@ const contactsDefault = [
     address: {},
     group: "family",
     createdAt: "2019-02-16",
+    modifiedAt: "",
     isFavorited: false,
   },
 ];

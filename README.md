@@ -23,6 +23,7 @@ The projects take inspiration from these websites:
 -   Search by group
 -   Contact detail page
 -   Creation info with relative moment from now
+-   Edit contact
 
 ## Preview
 
@@ -42,7 +43,7 @@ The projects take inspiration from these websites:
 -   [x] Click contact show detail of the contact
 -   [x] Contact detail page
 -   [x] Click on favorite button will toggle the favorite
--   [ ] Edit contact form
--   [ ] Fix the new contact page form to be more readable
+-   [x] Fix the new contact page form to be more readable
+-   [x] Edit contact form
 -   [ ] Add mandatory legend besides label for required input
 -   [ ] Add peer message for uncompliant Input

@@ -24,10 +24,10 @@ addContactFormElement.addEventListener("submit", (event) => {
       company: formData.get("company-name") || "",
     },
     address: {
-      street: "",
-      city: "",
-      state: "",
-      zip: "",
+      street: formData.get("street") || "",
+      city: formData.get("city") || "",
+      state: formData.get("state") || "",
+      zip: formData.get("zip") || "",
     },
     group:
       formData.get("group") != "new"
@@ -71,7 +71,6 @@ function configureGroupOption() {
   }
 
   groupOptionElement.addEventListener("change", () => {
-    console.log(newGroupSectionElement.className);
     if (groupOptionElement.value === "new") {
       newGroupSectionElement.classList.remove("hidden");
       newGroupElement.required = true;
