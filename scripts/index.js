@@ -60,6 +60,14 @@ function renderContacts() {
               contact.id
             }" src="/assets/pen-to-square-solid.svg" width="16" height="16" />
           </button>
+          <button
+            data-id="${contact.id}"
+            onclick="deleteContact(${contact.id})"
+            class="flex items-center size-10 justify-center rounded-full hover:bg-violet-300">
+            <img data-id="${
+              contact.id
+            }" src="/assets/trash-can-regular.svg" width="16" height="16" />
+          </button>
         </div>
       </a>`;
     })
@@ -79,6 +87,21 @@ function searchContacts(queryText) {
   return contactsData.filter((contact) => {
     return contact.name.toLowerCase().includes(queryText.toLowerCase());
   });
+}
+
+function deleteContact(id) {
+  event.stopPropagation();
+  event.preventDefault();
+
+  for (let i = 0; i < contactsData.length; i++) {
+    if (contactsData[i].id == id) {
+      contactsData.splice(i, 1);
+      localStorage.setItem("contactsData", JSON.stringify(contactsData));
+      break;
+    }
+  }
+
+  window.location.href = "/";
 }
 
 function joinObjectContent(object, delimiter) {

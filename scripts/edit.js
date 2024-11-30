@@ -131,7 +131,6 @@ function configureGroupOption() {
   }
 
   groupOptionElement.addEventListener("change", () => {
-    console.log(newGroupSectionElement.className);
     if (groupOptionElement.value === "new") {
       newGroupSectionElement.classList.remove("hidden");
       newGroupElement.required = true;

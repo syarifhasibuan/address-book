@@ -206,7 +206,6 @@ function toggleFavorite(event) {
   const contact = contactsData.find(
     (contactItem) => contactItem.id === parseInt(id)
   );
-  console.log(contact);
 
   contact.isFavorited = !contact.isFavorited;
 
