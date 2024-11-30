@@ -22,7 +22,7 @@ const contactsDefault = [
     },
     group: "friends",
     createdAt: "2022-09-18",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -48,7 +48,7 @@ const contactsDefault = [
     },
     group: "friends",
     createdAt: "2021-07-10",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -74,7 +74,7 @@ const contactsDefault = [
     },
     group: "friends",
     createdAt: "2023-03-28",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -100,7 +100,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2020-11-29",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -126,7 +126,7 @@ const contactsDefault = [
     },
     group: "friends",
     createdAt: "2017-06-14",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -152,7 +152,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2021-08-15",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -178,7 +178,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2019-01-19",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -204,7 +204,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2021-09-21",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -230,7 +230,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2022-12-15",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -256,7 +256,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2022-07-11",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -282,7 +282,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2021-11-30",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -308,7 +308,7 @@ const contactsDefault = [
     },
     group: "friends",
     createdAt: "2020-02-17",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -334,7 +334,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2019-06-25",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -360,7 +360,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2018-10-09",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -386,7 +386,7 @@ const contactsDefault = [
     },
     group: "friends",
     createdAt: "2017-01-03",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -412,7 +412,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2024-11-27",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -438,7 +438,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2024-09-14",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -464,7 +464,7 @@ const contactsDefault = [
     },
     group: "friends",
     createdAt: "2016-12-01",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -490,7 +490,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2017-03-19",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -516,7 +516,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2018-07-04",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -542,7 +542,7 @@ const contactsDefault = [
     },
     group: "friends",
     createdAt: "2019-11-27",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -568,7 +568,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2020-02-14",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -594,7 +594,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2021-06-01",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -620,7 +620,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2018-12-20",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -646,7 +646,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2023-12-05",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -672,7 +672,7 @@ const contactsDefault = [
     },
     group: "",
     createdAt: "2022-03-22",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -698,7 +698,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2015-11-11",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -727,7 +727,7 @@ const contactsDefault = [
     },
     group: "work",
     createdAt: "2020-11-29",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
   {
@@ -748,7 +748,7 @@ const contactsDefault = [
     address: {},
     group: "family",
     createdAt: "2019-02-16",
-    modifiedAt: "",
+    lastModified: "",
     isFavorited: false,
   },
 ];

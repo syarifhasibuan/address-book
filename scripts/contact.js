@@ -166,10 +166,10 @@ function renderContact() {
         <span class="">${moment(`${contact.createdAt}`).fromNow()}</span>
       </p>
       ${
-        !!contact.modifiedAt
+        !!contact.lastModified
           ? `<p class="flex flex-row gap-4 mb-1">
         <span class="">Modified:</span>
-        <span class="">${moment(`${contact.modifiedAt}`).fromNow()}</span>
+        <span class="">${moment(`${contact.lastModified}`).fromNow()}</span>
       </p>`
           : ``
       }

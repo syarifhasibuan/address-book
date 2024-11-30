@@ -23,7 +23,7 @@ addContactFormElement.addEventListener("submit", (event) => {
   contactToEdit.address.city = formData.get("city") || "";
   contactToEdit.address.state = formData.get("state") || "";
   contactToEdit.address.zip = formData.get("zip") || "";
-  contactToEdit.modifiedAt = new Date();
+  contactToEdit.lastModified = new Date();
 
   localStorage.setItem("contactsData", JSON.stringify(contactsData));
 
