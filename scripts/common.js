@@ -1,3 +1,20 @@
+const searchForm = document.getElementById("search-form");
+const searchInput = document.getElementById("contact-search");
+
+document.addEventListener("keyup", (event) => {
+  if (event.ctrlKey && event.shiftKey && event.code === "KeyF") {
+    searchInput.focus();
+  }
+});
+
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const url = new URL(window.location.href);
+  const id = url.searchParams.get("id");
+
+  window.location.href = "/" + "?q=" + searchInput.value;
+});
+
 function renderSidebar() {
   const groupDiv = document.getElementById("group-list");
 
