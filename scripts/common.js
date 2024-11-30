@@ -14,7 +14,7 @@ function renderSidebar() {
         <a href="/?group=${groupName}"
           class="h-full flex flex-row w-full rounded-lg hover:bg-violet-200 text-left pl-4"
         >
-          <img src="/assets/address-card-solid.svg" height="24" width="24" />
+          <img src="/assets/people-group-solid.svg" height="24" width="24" />
           <span class="text-xl text-gray-700 p-2">${groupName}</span>
         </a>
       </div>

@@ -29,7 +29,10 @@ addContactFormElement.addEventListener("submit", (event) => {
       state: "",
       zip: "",
     },
-    group: formData.get("group") || "",
+    group:
+      formData.get("group") != "new"
+        ? formData.get("group")
+        : formData.get("new-group") || "",
     createdAt: new Date(),
     isFavorited: false,
   };
@@ -40,3 +43,43 @@ addContactFormElement.addEventListener("submit", (event) => {
 
   window.location.href = `/contact/?id=${newContactData.id}`;
 });
+
+const groupOptionElement = document.getElementById("group");
+const newGroupSectionElement = document.getElementById("new-group-section");
+const newGroupElement = document.getElementById("new-group");
+
+function configureGroupOption() {
+  const availGroups = [
+    ...new Set(
+      contactsData
+        .map((contact) => (!!contact.group ? contact.group : ""))
+        .filter((groupName) => groupName != "")
+    ),
+  ];
+
+  for (let i = 0; i < availGroups.length; i++) {
+    const newOpt = document.createElement("option");
+    newOpt.value = availGroups[i];
+    newOpt.text = availGroups[i];
+
+    groupOptionElement.add(newOpt);
+  }
+
+  if (groupOptionElement.value === "new") {
+    newGroupElement.required = true;
+    newGroupSectionElement.classList.remove("hidden");
+  }
+
+  groupOptionElement.addEventListener("change", () => {
+    console.log(newGroupSectionElement.className);
+    if (groupOptionElement.value === "new") {
+      newGroupSectionElement.classList.remove("hidden");
+      newGroupElement.required = true;
+    } else {
+      newGroupSectionElement.classList.add("hidden");
+      newGroupElement.required = false;
+    }
+  });
+}
+
+configureGroupOption();

@@ -76,7 +76,10 @@ function renderContact() {
           : ""
       }
       ${
-        !!contact.address
+        !!contact.address.street &&
+        !!contact.address.city &&
+        !!contact.address.state &&
+        !!contact.address.zip
           ? `<p class="flex flex-row items-start gap-4 mb-2">
         <img
           src="/assets/location-dot-solid.svg"
