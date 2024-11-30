@@ -1,72 +1,107 @@
-const formSectionElement = document.getElementById("add-form");
 const addContactFormElement = document.getElementById("addContactForm");
 
 addContactFormElement.addEventListener("submit", (event) => {
   event.preventDefault();
+
   const url = new URL(window.location.href);
-  const idParams = url.searchParams.get("id");
+  const id = url.searchParams.get("id");
 
   const formData = new FormData(addContactFormElement);
+  let contact = {};
 
-  const contactToEdit = getContactById(idParams);
+  // New contact
+  if (!id) {
+    const newId = contactsData[contactsData.length - 1].id + 1;
 
-  contactToEdit.name = formData.get("name") || "";
-  contactToEdit.nickname = formData.get("nickname") || "";
-  contactToEdit.email = formData.get("email") || "";
-  contactToEdit.phone.countryCode = formData.get("country-code") || "";
-  contactToEdit.phone.areaCode = formData.get("area-code") || "";
-  contactToEdit.phone.phoneNumber = formData.get("phone-number") || "";
-  contactToEdit.workInfo.jobTitle = formData.get("job-title") || "";
-  contactToEdit.workInfo.department = formData.get("department") || "";
-  contactToEdit.workInfo.company = formData.get("company-name") || "";
-  contactToEdit.address.street = formData.get("street") || "";
-  contactToEdit.address.city = formData.get("city") || "";
-  contactToEdit.address.state = formData.get("state") || "";
-  contactToEdit.address.zip = formData.get("zip") || "";
-  contactToEdit.lastModified = new Date();
+    contact = {
+      id: newId,
+      name: formData.get("name") || "",
+      nickname: "",
+      email: formData.get("email") || "",
+      phone: {
+        countryCode: formData.get("country-code") || "",
+        areaCode: formData.get("area-code") || "",
+        phoneNumber: formData.get("phone-number") || "",
+      },
+      workInfo: {
+        jobTitle: formData.get("job-title") || "",
+        department: formData.get("department") || "",
+        company: formData.get("company-name") || "",
+      },
+      address: {
+        street: formData.get("street") || "",
+        city: formData.get("city") || "",
+        state: formData.get("state") || "",
+        zip: formData.get("zip") || "",
+      },
+      group:
+        formData.get("group") != "new"
+          ? formData.get("group")
+          : formData.get("new-group") || "",
+      createdAt: new Date(),
+      isFavorited: false,
+    };
 
+    contactsData.push(contact);
+  }
+  // Edit contact
+  else {
+    contact = contactsData.find((contactItem) => contactItem.id == id);
+
+    contact.name = formData.get("name") || "";
+    contact.nickname = formData.get("nickname") || "";
+    contact.email = formData.get("email") || "";
+    contact.phone.countryCode = formData.get("country-code") || "";
+    contact.phone.areaCode = formData.get("area-code") || "";
+    contact.phone.phoneNumber = formData.get("phone-number") || "";
+    contact.workInfo.jobTitle = formData.get("job-title") || "";
+    contact.workInfo.department = formData.get("department") || "";
+    contact.workInfo.company = formData.get("company-name") || "";
+    contact.address.street = formData.get("street") || "";
+    contact.address.city = formData.get("city") || "";
+    contact.address.state = formData.get("state") || "";
+    contact.address.zip = formData.get("zip") || "";
+    contact.group =
+      formData.get("group") != "new"
+        ? formData.get("group")
+        : formData.get("new-group") || "";
+    contact.lastModified = new Date();
+  }
   localStorage.setItem("contactsData", JSON.stringify(contactsData));
-
-  window.location.href = `/contact/?id=${contactToEdit.id}`;
+  window.location.href = `/contact/?id=${contact.id}`;
 });
 
-function modifyFormDefault() {
+function fillContactToEdit() {
   const url = new URL(window.location.href);
-  const idParams = url.searchParams.get("id");
+  const id = url.searchParams.get("id");
 
-  if (!idParams) {
-    window.location.href = "/";
+  if (!id) {
     return;
   }
 
-  const contactToEdit = getContactById(idParams);
+  const contact = contactsData.find(
+    (contactItem) => contactItem.id === parseInt(id)
+  );
 
-  document.getElementById("name").value = contactToEdit.name;
-  document.getElementById("email").value = contactToEdit.email;
-  document.getElementById("country-code").value =
-    contactToEdit.phone.countryCode;
-  document.getElementById("phone-number").value =
-    contactToEdit.phone.phoneNumber;
-  document.getElementById("job-title").value = contactToEdit.workInfo.jobTitle;
-  document.getElementById("department").value =
-    contactToEdit.workInfo.department;
-  document.getElementById("company-name").value =
-    contactToEdit.workInfo.company;
-  document.getElementById("street").value = contactToEdit.address.street;
-  document.getElementById("city").value = contactToEdit.address.city;
-  document.getElementById("state").value = contactToEdit.address.state;
-  document.getElementById("zip").value = contactToEdit.address.zip;
-  document.getElementById("group").value = contactToEdit.group;
-}
-
-function getContactById(id) {
-  for (let i = 0; i < contactsData.length; i++) {
-    if (contactsData[i].id == id) {
-      return contactsData[i];
-    }
+  if (!contact) {
+    window.location.href = "/edit/";
+    return;
   }
 
-  return null;
+  document.getElementById("name").value = contact.name;
+  document.getElementById("email").value = contact.email;
+  document.getElementById("country-code").value = contact.phone.countryCode;
+  document.getElementById("phone-number").value = contact.phone.phoneNumber;
+  document.getElementById("job-title").value = contact.workInfo.jobTitle;
+  document.getElementById("department").value = contact.workInfo.department;
+  document.getElementById("company-name").value = contact.workInfo.company;
+  document.getElementById("street").value = contact.address.street;
+  document.getElementById("city").value = contact.address.city;
+  document.getElementById("state").value = contact.address.state;
+  document.getElementById("zip").value = contact.address.zip;
+  document.getElementById("group").value = contact.group;
+
+  return;
 }
 
 const groupOptionElement = document.getElementById("group");
@@ -108,4 +143,4 @@ function configureGroupOption() {
 }
 
 configureGroupOption();
-modifyFormDefault();
+fillContactToEdit();

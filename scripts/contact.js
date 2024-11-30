@@ -10,8 +10,19 @@ function renderContact() {
   const id = parseInt(idParams);
 
   const contact = contactsData.find((contactItem) => {
+    // Question: which one is correct?
+    // const id = parseInt(idParams);
+    // return contactItem.id === id;
+    // or
+    // return contactItem.id == id;
     return contactItem.id === id;
   });
+
+  if (!contact) {
+    window.location.href = "/";
+    return;
+  }
+
   const mapsURI = encodeURI(
     contact.address.street +
       " " +
