@@ -13,13 +13,12 @@ The projects take inspiration from these websites:
 
 ## Features
 
--   Static contact list
+-   Add new contact to local Storage
 -   Search contact by all parameter
 -   Shortcut key to focus on search bar
 -   Show favorite in an icon
 -   Highlight the contact that you are hovering
 -   Sort by name alphabetically
--   Add new contact
 -   Search by group
 -   Contact detail page
 -   Creation info with relative moment from now
