@@ -36,7 +36,9 @@ function renderContact() {
   const elementToRender = `
 <div class="p-8 max-w-4xl">
   <div class="flex flex-row justify-between">
-    <h1 id="full-name" class="text-3xl pb-1">${contact.name}</h1>
+    <h1 id="full-name" class="text-3xl pb-1">${contact.name}${
+      !!contact.nickname ? ` "` + contact.nickname + `"` : ""
+    }</h1>
     <div class="flex flex-row">
       <button
         data-id="${contact.id}"
